@@ -1,0 +1,66 @@
+Object Oriented Programming
+
+organizing your code and making them into nouns!
+
+DOM
+an abstraction of getting the object from the document.
+the end result is an object you can manipulate.
+
+the element is the most robust object.
+
+checkout mozilla for object oriented programming.
+(JS is quirky compared to the other languages)
+
+string is actually an object...
+
+method is another word for function.
+
+object is an arbitray data structure
+array is a list of data
+
+this
+
+in general it refers to the object it's in.
+
+
+use:
+.bind() is used for events
+.call()
+
+yellowSub.summary.call(yellowSub);
+
+
+Prototypes:
+object - string - and your string
+
+when you create a string you get stuff from Object prototype
+
+constructors should be simple...
+
+class...
+constructor...
+prototype... template that becomes part of the object
+
+JS is prototype based language.. function based.. and then objects.
+
+start with plain objects.. then constructor.. then make it a function.. then create a prototype.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

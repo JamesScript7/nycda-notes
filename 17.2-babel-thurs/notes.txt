@@ -1,0 +1,71 @@
+BABEL
+
+let sayHello = 
+  name => console.log(`hello, ${name}`)
+;
+
+sayHello("world");
+
+
+example: Hat.create returns a promise (asyncronous)
+
+//old way
+.then(function(row) { return row.destroy() })
+
+//new way
+.then(row => row.destroy())
+
+.then( () => console.log("All gone, hat"))
+.catch(err => { console.error(err) });
+
+(custom commands)
+npm run show-files
+
+"scripts": {
+    "show-files": "ls -l"
+  },
+
+npm run most-recent
+
+"scripts": {
+    "most-recent": "ls -last | head -n3"
+  },
+
+-D shortcut for --save-dev
+
+to install presets:
+
+npm install babel-preset-latest -D
+
+create a .babelrc with this inside:
+
+{
+	"presets": ["latest"]
+}
+
+
+babel arrow.js > arrow6.js
+> means to output to...
+
+http-server
+
+spits out js file into something the browser would understand
+
+browserify moment-example.js -o bundle.js
+
+you don't want to have artifacts in git... like browserify output
+
+.gitignore
+
+/usr/local/bin/browserify
+
+
+you have more control over the local modules.
+
+git config --list
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+ctrl-c
+to stop the function? to stop running the program?
+
+event handling in node:
+
+how to make your own event!
+
+you can theoretically write your own library!
+
+some events:
+click
+submit
+load
+
+when you send out an event it's called "emitting"
+
+recievers of the events is called "listener"
+
+File I/O - open, close
+
+UI actions - click, scroll, keydown
+
+Node HTTP servers - connect, continue
+
+event.target (when ur listening to clicks.. u can listen to what was actually clicked.. what was clicked.)
+
+like, event.preventdefault
+
+
+This is how you listen to an arbitrary event:
+//you require an events
+
+var EventEmitter = require('events');
+
+var myEmitter = new EventEmitter();
+
+(emitter can listen and emmit events)
+
+myEmitter.on('my-event', function(message) {
+	console.log(message);
+});
+
+------
+
+myEmitter.emit('my-event', 'hello world!');
+
+myEmitter.emit("uploadComplete", fileInfo);
+
+
+myEmitter.on("uploadComplete", function(fileInfo) {
+	var uploadTweet = new Tweet();
+	uploadTweet.text = "Hey, I just got a new upload! " + fileInfo.fileName;
+});
+
+decoupling: is a way to seperate different functionality... like, seperate uploading and tweeting code.
+
+passing messages are a great way to seperate systems.
+
+.removeListener();
+
+.prototype to create your own event listener...
+
+ringing on a door bell... emmit that and then have a listener to respond to that event.
+
+express is a webframework to help you make your won web appliction.
+
+
+
+
+you usually export a function or an object.
+a code that does something.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

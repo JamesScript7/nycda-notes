@@ -1,0 +1,57 @@
+CRUD AND REST
+
+Create:
+CREATE
+READ
+UPDATE
+DELETE
+
+REST: (Representational State Transfer)
+(verb)/(noun)
+POST /widgets -> Create
+GET /widgets -> Read (list)
+GET /widgets/123 -> Read (item)
+POST /widgets/123 -> Update
+DELETE /widgets/123 -> Delete
+
+use internal links to load an external source
+
+<a href="#comments">
+<a href="#post-123">
+
+
+express application generator
+
+npm install express-generator -g
+
+npm i -g sequelize-cli
+
+
+
+express myapp --view=ejs
+
+npm start
+
+sequelize init
+
+
+npm i sqlite3 --save-dev
+
+sequelize db:migrate
+
+
+change this:
+
+"production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+
+
+
+
+
+
+
+
+
+

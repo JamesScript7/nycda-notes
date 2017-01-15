@@ -1,0 +1,54 @@
+Intro to the Web:
+
+cern.
+wiki.
+
+Client = Browser
+(not all the time but usually)
+
+http
+https "secure"
+(scrambles the message, sends it, then unscrambles it)
+
+Text editors:
+gedit
+vim
+BBEdit
+
+look into linux?
+
+
+HTML
+
+TAGS (is an element with everything that it contains):
+<p>
+<h1>-<h6>
+<img />
+<ul>
+<ol>
+<li>
+<div>
+<a>
+<nav>
+<header>
+<footer>
+
+
+Attributes:
+name="value"
+
+URL = uniform resource locator
+
+Same directory is just the filename.png
+One directory down is folder name and then the filename.png
+One directory up is ../filename.png (.. means get out of the box)
+Top directory is /filename.png
+
+a b b a (poetry structure[?] for tag nesting)
+
+commenting
+
+You can also link an image
+<a href="">
+	<img src="" />
+</a>

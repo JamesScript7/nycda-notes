@@ -1,0 +1,129 @@
+...continued
+
+Internal links
+
+<a id="top" href="#bottom">
+	Go to Bottom
+</a>
+
+<a id="bottom" href="#top">
+	Go to top
+</a>
+
+you can add target="_blank" as an attribute in your anchor tag.
+
+
+<div> block tag
+how to organize your page vertically
+is for sections of the page
+
+<span> inline tag
+Does nothing on it's own
+Can be used to do something with it later on
+
+---------------------------------------------------
+
+Lecture 1.2
+Element is a chunk of HTML from begining to end.
+
+CSS!
+
+If you're adding inline css styles and if it's only one attribute then you don't need a semi colon
+
+ex:
+<p style="color: blue">
+</p>
+
+<div>
+<a>
+Links do not inhert color
+</a>
+
+unless this special instruction is used!
+
+<div style="color: black">
+  <a style="color: inherit"
+	href="">
+	LINK
+  </a>
+</div>
+
+Go to:
+web_colors on wiki
+
+htmlcolorcodes.com
+
+CSS rules
+
+selector {
+	attribute: value;
+}
+
+
+You can have multiple selectors in a rule
+You won't have to type in the colors twice.
+
+.intro, .outro {
+	color: blue;
+}
+
+DRY - Don't Repeat Yourself
+
+
+div.intro
+It'll only match div tags with class intro
+It won't match p tags with class intro
+
+
+anchor tag nested withing an element with a menu class nested within an element with a header class nested within an element with an about class.
+
+
+Nested attributes
+
+.about .header .menu a {
+	
+}
+
+To make changes on both:
+
+.about .header .menu a,
+.about .header .menu a {
+	
+}
+
+When you draw on the whiteboard and sketch out the page, thats called wireframe.
+
+nav, section, header, and footer tags are some of the new tags in HTML5
+
+mainly for google
+
+Google tends to grab h1 elements
+
+
+If an element has 2 classes you have to keep the classes together in the selector
+
+.nav.menu a {
+	
+}
+
+<ul class="nav menu">
+	<a>
+
+	</a>
+</ul>
+
+class names take precedence over tag names
+or if they are equal the last one wins.
+
+or whatever selector that is more specific
+
+
+
+
+
+
+
+
+
+
+

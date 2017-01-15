@@ -1,0 +1,154 @@
+class resumes on JAN 3rd.
+
+IN CLASS WORKSHOP:
+
+module is something you can export...
+
+so when you create a library and you can export it.. then it called a module.
+
+passport JS
+
+App1                    App2
+
+Passport uses OAuth 2.0
+
+npm install passport-local --save
+
+app.use(session({
+	secret: process.env.session_key || 'session pw',
+	resave:
+	saveUninitialized:
+	cookie:
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+login.js:
+
+
+var express = require('express');
+var router = express.Router();
+
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
+passport.use(new LocalStrategy(function(username,password, done) {
+	console.log("in LocalStrategy");
+	//everything in here will be password protected.
+
+
+}))
+
+//login page
+app.get('/login', function(req,res) {
+	res.render('login');
+})
+
+//login action
+router.post('/login', passport.authenticate('local', {
+	successRedirect: '/',
+	failureRedirect: '/login'
+}))
+
+
+
+app.js:
+
+var session
+var passport
+var path
+var logger
+var cookieParser
+var bodyParser
+
+
+passport.serializeUser(function(user, done) {
+	done(null,user);
+});
+
+passport.deserializeUser(function(user,done) {
+	done(null,user);
+});
+
+
+
+(post to your app)
+(everything in quotation mark goes in body)
+curl -d 'username:'dasd'&password:'asd123' http://www.localhost:3000/login
+
+
+passport is authentication middleware
+
+OAuth is a standard
+
+passport knows through the data that is passed in
+
+
+npm i jquery
+
+mv jquery.min.js
+
+hot: use require to include 3rd party JS in their app.
+
+so you can use browser side and app side
+
+
+router.get('/index.json', function(req,res,next) {
+	var movies = [{
+		title: "star wars",
+		year: 1977,
+		director: "George lucas"
+	}];
+
+	res.json(movies);
+})
+
+it downloads it:
+curl -O http://localhost:3000
+
+
+
+
+to speed up percieved page load just put the script tag at the bottom of the body.
+
+$.get('/index.json', function(movies) {
+	var moviesList = $("#movies");
+
+	for (var i in movies) {
+
+		var newMovieItem = $("<li>");
+		newMovieItem.html(movies[i]title);
+
+		moviesList.append(newMovieItem);
+	}
+})
+
+Movie.findAll()
+
+html
+use jquery get request
+then the response is the content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+Taking a break from databases:
+
+promises!
+
+instead of callbacks... we'll practice with promises.
+
+has 3 states:
+pending: initial state
+fulfilled:
+rejected:
+
+or
+
+resolved:
+settled:
+
+
+reject(error);
+resolved(result);
+
+var promise = new Promise(function(resolved, reject) {
+	setTimeout(function() {
+		resolve('hello world');
+	}, 1000);
+});
+
+promise.then(function(result) {
+	console.log(result);
+});
+
+promise.catch(function(err) {
+	console.log("uh oh");
+})
+
+
+
+
+*stackoverflow: promises and callbacks
+
+.then and .catch both returns promises!
+
+
+doSomething(x,y).then(function(result) {
+	handleResult(result);
+
+	doSomethingElse();
+}).then(function() {
+	doAnotherThing();
+}).catch(function() {
+	handleError(err);
+});
+
+you can use this in a database senario
+
+fs.readFile(filename, function(contents) {
+	
+});
+
+fs.readFile(filename).then(function(contents) {
+	fs.writeFile(file2, contents + "hello");
+}).then(function() {
+	console.log("file written successfully");
+})
+
+
+console.debug
+console.error
+
+
+
+Object-Relational Mapping (ORM)
+
+
+
+connects an object you create in a code to a row in a database...
+
+so when you update your code it updates sql row
+
+Sequelize
+
+
+var Hat = sequelize.define('hat', {
+	name: Sequelize.STRING,
+	material: Sequelize.STRING,
+	height: Sequelize.INTEGER,
+	brim: Sequelize.BOOLEAN
+});
+
+Hat.sync()
+.then
+
+Hat.create({
+	name: 'cowboy',
+	material: 'straw',
+	height: 4,
+	brim: true
+});
+
+becomes:
+
+INSERT INTO "hat" ("id" )
+
+
+
+
+CREATE TABLE blog_posts (
+	"id" INTEGER,
+	"title" VARCHAR(255), //maximum size of data?
+	"body" TEXT,
+	"timestamp" DATETIME
+);
+
+INSERT INTO blog_posts
+(title, body, timestamp)
+VALUES (
+	"First Post!",
+	"Hello, World!",
+	DATETIME()
+);
+
+if you typed in your terminal:
+
+
+environment variables:
+var inProduction = ENV['IN_PRODUCTION']
+
+Hat.findAll().then(function(rows) {
+	console.log("We found : ");
+	var Hat = rows[0].dataValues;
+
+})
+
+.findAll() is SELECT * FROM
+Hat.findById(id).then(function(row) {
+	var hat = 
+})
+
+sqlite3.run("INSERT INTO...");
+
+for sequelize, it writes the queries for you.
+
+WHERE clause:
+
+Hat.findAll({
+	where: { brim: true; }
+}).then
+
+
+var productionDBURL = 'postgres://user:password@localhost/my_db';
+
+this will..
+--save-dev
+
+heroku doesn't need sqlite3
+use port 80?
+
+
+
+

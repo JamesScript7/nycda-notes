@@ -1,0 +1,73 @@
+HMTL, CSS, JS, and DOM
+DOM continued...
+
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.body.innerHTML = 
+
+you don't want to give everything an id just so you can use it for programming.
+
+(Forms)
+
+
+var newElement = document.createElement("li");
+
+newElement.innerText = "Hi!";
+
+lists[0].appendChild(newElement);
+(you're adding more to the list)
+
+<ul class="list">
+	<li>...<li>
+	<li>Hi!</li> <!--new!-->
+</ul>
+
+API = application programming interface.
+
+<forms>
+consists of three elements
+A text box, drop down, and a button.
+
+<form>
+
+respond to event(main thing JS does)
+Event handling:
+
+theres a built in event listener:
+
+AJAX = send requests for data...
+
+
+
+1 - ask
+2 - recieve
+3 - feedback
+
+set empty var then assign var in the if/else then publish!
+
+
+getbootstrap.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

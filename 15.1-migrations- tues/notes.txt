@@ -1,0 +1,119 @@
+we're going to move away from sync and use migrations instead.
+
+
+CONFIG file:
+
+{
+  "development": {
+    "storage": "app.db",
+    "dialect": "sqlite3"
+  },
+  "test": {
+    "storage": "test.db",
+    "dialect": "sqlite3"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}
+
+
+
+sequelize help:model:create
+
+sequelize model:create --name Photo --attributes filename:string,filesize:integer,multer_id:string
+
+
+migration is a script that will mutate the database
+(so you don't have to delete the db every time you wanted to change the table name)
+
+ls migrations
+
+keep "type:" at the bottom
+
+
+*************** SYNC ON STEROIDS ****************
+sequelize db:migrate
+sqlite3 app.db
+.schema
+***************************************************
+
+*
+short: use string
+text: use text:text
+
+sequelize model:create --name Comment --attributt --attributes photo_id:integer,text:text
+
+allowNull etc. is in the migration instead of the model
+
+
+SELECT * FROM SequelizeMeta
+(will track migrations)
+
+
+CASCADE - going down and deleting everything that is connected to it.
+
+
+*
+.q to quite sqlite3
+
+
+*
+docs.sequelizejs.com/en/v3/docs/associations
+
+example:
+
+app.get("/photo/:id/comments", function(req, res) {
+	Photo.findById(req.params.id).then(function(photo) {
+		return photo.getComments();
+	}).then(function(comments) {
+
+	})
+})
+
+
+comment.getPhoto().then(function(photo) {
+	
+})
+
+
+sequelize seed:create --name new_posts_new_comments
+
+
+
+if tables are associated.. then you can just run this instead of setting the photo id
+
+getPhoto()
+
+sequelize: Object relational mapper
+
+
+migrations doc
+renameTable
+
+
+passport js
+
+passport.authenticate('facebook');
+
+*sign up for API key from provider
+*you never see their password.
+*you don't have to create a login
+
+
+client -- app -- db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

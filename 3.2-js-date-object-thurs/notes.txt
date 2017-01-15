@@ -1,0 +1,131 @@
+JavaScript!
+
+confirm()
+get user input (true or false)
+
+confirm("Are you sure?")
+
+prompt()
+Get user input (anything)
+
+Date()
+var now = new Date();
+
+now.getYear();
+now.getFullYear();
+now.getMonth();
+	will start counting from 0.
+	so January is 0
+
+now.getDate();
+
+now.getHours(); 24hour
+now.getMinutes();
+now.getSeconds();
+
+
+now.toTimeString();
+
+now.toDateString();
+
+now.toLocaleString();
+the date will be in a different order to which it is written in that area.
+
+now.getTime();
+will give you miliseconds
+
+now.getMilliseconds();
+the number is most likely random, truely random.
+
+Date.parse("January 1, 2016");
+will be in milliseconds
+
+
+The year 2037 problem
+
+toString();
+
+var num = 12345;
+num.toString();
+
+to can turn an array, integer to a string.
+
+parseInt();
+
+turn string into an integer
+
+general rule: make sure you use the right types.
+
+
+isNaN
+
+parseFloat();
+
+Math.round(); round at up or down at .5
+Math.floor(); round down
+Math.ceil(); round up
+Math.random();
+
+
+round down when you want a range of numbers
+
+var now = new Date();
+console.log(now);
+
+var seconds = now.getSeconds();
+var minutes = now.getMinutes();
+var hours = now.getHours();
+var days = now.getDay();
+
+
+var currentDay = "Current Time is: \nDay: " + days + "\nHour: " + hours + "\nMinutes: " + minutes + "\nSeconds: " + seconds;
+
+console.log(currentDay);
+
+
+Date.parse(now);
+
+var fastFowardTime = 1234 * 1000;
+
+var futureSec = Date.parse(now) + (fastFowardTime);
+
+var futureMin = Date.parse(now) + (60 * fastFowardTime);
+
+var futureHour = hours + 1234;
+
+var futureDay = (days + 1234) % 7;
+
+console.log(Date.parse(now));
+console.log(futureSec);
+
+you can use modulo to get a range!!
+
+12 % 6
+you would get a range of numbers from 0-6
+
+now.getMilliseconds() * Math.random()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

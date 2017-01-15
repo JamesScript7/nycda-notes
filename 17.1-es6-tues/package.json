@@ -1,0 +1,10 @@
+{
+  "name": "17.1",
+  "version": "1.0.0",
+  "main": "es5.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+}

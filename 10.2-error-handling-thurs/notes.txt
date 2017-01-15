@@ -1,0 +1,17 @@
+Error handling
+
+Promise: deals with callback hell.
+
+promises are useful for APIs where time is important!
+
+safest
+<%= %>
+
+_underline_
+*bold*
+`codify`
+
+
+make sure it has an index if your selecting by a certain field.
+
+when in doubt index.

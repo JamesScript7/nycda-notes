@@ -1,0 +1,164 @@
+TERMINAL!
+
+ps
+
+prints programs that are open
+
+pwd = present working directory
+
+-l
+detailed list
+
+permissions - 
+
+ls -lh
+("h" stands for human)
+
+"-l" is called a flag
+
+man stands for manual
+
+~/Desktop
+
+/ says the desktop in the home directory
+
+~/ = path
+
+~ stands for home directory
+
+you can view the contents of any directory even if you arn't in that particular directory.
+
+../..
+means two levels up
+
+a slash at the end means it's a directory!
+
+. means current directory (reference to the current directory.)
+
+/ indicates an absolute path and should be put in front
+
+ex:
+/home/kiimjames/music
+
+anything after the pound sign it ignores!
+
+#comments in shell
+
+cow foo bar
+
+common unix shell examples
+
+rm -i midas.txt
+(interactive! it will ask you before proceeding)
+
+rm -f midas.txt
+force remove!
+
+rm -r
+dangerous
+
+/ is before C:
+
+rm -ri
+
+-p
+parent..
+will make touch a/b/c work... make folders in folders that doesn't exist yet.
+
+cat
+
+stands for concatenate
+and will print out whats in the file.
+
+
+echo hello
+
+will print out hello
+
+
+less
+lets you look at a file in a new window/page
+
+cp -i
+gives you a prompt if you want to overwrite the copying file
+
+cp -r dir1 dir2
+
+will recursively copy dir and everything in it.
+
+mv
+renames(if you want) and moves it
+
+file transfering:
+ftp
+ssh
+nfs
+
+always have / after the directory
+
+like:
+my-project/styles/
+
+history
+
+nano/pico
+shell editor
+
+hello, nano
+
+control O
+
+grep: global regular expression program?
+
+grep jquery index.html
+
+grep css index.html
+
+take the output of ls and output it
+
+ls | grep hello
+
+ls | grep -i screen
+(case insensitive)
+
+
+ls grep -v Screen | less
+
+
+wc (word count)
+
+line words characters
+
+
+GIT
+ git init
+ git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

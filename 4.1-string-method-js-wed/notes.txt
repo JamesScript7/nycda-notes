@@ -1,0 +1,61 @@
+Developer console
+
+s = "hello";
+s.includes("hi");
+
+lets you see if the word exist 
+
+check out JavaScript reference on MDN.
+
+prototype: 
+
+strings sort of work like arrays?
+
+.indexOf();
+
+"hello"
+
+you can use .replace to only
+
+"hello".toUpperCase().charAt(0) + "hello".slice(1);
+
+or
+
+s[0].toUppercase() + s.slice(1);
+
+coderbyte.com
+
+function to capitalize the first letter of a word.
+
+.sort() we will use this a lot
+
+var fruit = ['a', 'b', 'c']
+fruit.sort();
+
+sort takes in functions...
+
+SCOPE
+
+
+If you don't declare the variable inside the function then it becomes a global variable.
+
+Histogram.
+
+Battle of Aclea
+
+create an object and create an entry for "a", "b", etc.
+
+***
+if (histogram[letter] == null) {
+	histogram[letter] = 0;
+}
+
+and then .sort with sort function within!
+
+
+
+
+
+
+
+

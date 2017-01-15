@@ -1,0 +1,165 @@
+postgressql.org
+
+you can start with a single postgresql database.. it handles a lot of traffic
+
+postgres, sql = DBMS
+
+indexedDB
+
+NoSQL is unstructured
+
+constructor will give you a structure... to make sure certain data is there.
+
+couchDB
+mongoDB
+
+having a schema forces consistency.. sql
+
+ALTER TABLE if you want to add constraints after the fact
+
+data is the end game! it's the most important
+
+backing up is important!
+
+INSERT INTO blog_posts
+(body, timestamp)
+VALUES
+("Body", DATETIME());
+
+this won't work if you have the not null constraint.. it's missing title
+
+*Reminder: strings go in single 'quotes'
+
+index keeps it sorted
+
+having DB indexes will speed up your website
+
+DROP INDEX blog_posts_title;
+
+CREATE INDEX blog_posts_title
+ON blog_posts (title);
+
+realtional databases
+
+profiles
+id | user_id | photo
+1  | 7		 | sally.jpg
+2  | 8		 | ned.png
+3  | 9		 | s1.png
+   (foreign key)
+
+SELECT * FROM profiles WHERE profiles.user_id = 7;
+
+
+
+blog-post table 	->		authors table
+
+
+
+comments table
+
+
+blogpost.id
+author.id
+
+
+grabbing comments
+
+SELECT * FROM comments
+WHERE blog_post_id=123;
+
+SQL injection
+
+prevents sql injection attacks
+makeQuery('SELECT...', blogPostId)
+
+*constraints are very important!!
+
+
+
+Database realtionships 1-to-1:
+one user has one profile
+one customer has one profile
+
+foreign key is unique!
+
+1-to-many:
+
+one blog post many comments
+one author many blog posts
+
+order can have many products
+products can have many orders
+
+combinations have to be unique
+
+
+students and classes example are independent
+no foreign id
+
+FOREIGN KEY ()
+						  Join --->
+SELECT students.name FROM students, enrollments
+WHERE enrollments.student_id = student.id
+AND enrollments.course_id = ?
+
+To find the specific course: making sure the student id matches the course id?
+
+you have 2 filers! WHERE + AND
+
+SELECT COUNT(*) FROM courses... (to see how many course she is in)
+
+SELECT MAX(course_id) FROM courses...
+
+SELECT courses.name FROM courses, enrollments
+WHERE enrollments.course_id = courses.id
+AND student_id = 7;
+AND enrollments.enrollment_date >= courses.start_date
+ORDER BY courses.name DESC;
+
+
+cartesian product:
+SELECT * FROM courses, enrollments
+You'll get every combination! but it's too much! you don't need al that.
+
+every row of courses mixed with every row from enrollments
+
+
+you have to tell sql how the tables are connected... thats called a join.
+
+
+
+RESULTS TABLE
+students.id  students.name  enrollments.student_id  enrollments.class_id
+
+*join table
+
+twilio
+
+https://github.com/mapbox/node-sqlite3/
+
+var sqlite3 = require('sqlite').verbose();
+
+you can serialize or parallelize queries
+		(blocking)   (non-blocking)
+
+
+whatever that ends with 8:
+'%8'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

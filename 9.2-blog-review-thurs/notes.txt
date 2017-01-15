@@ -1,0 +1,48 @@
+nodemon
+
+
+middleware?
+
+you can just write contacts without contacts.ejs because of the view engine.
+
+body parser: takes the request coming in and formats it.
+
+post can only add stuff to the database
+
+in certain cases we can have the ejs render.
+you don't have to render something with POST
+
+partial*
+
+sudo npm install -g nodemon
+so you wont have to close your server everytime you make a change.
+
+
+xml json
+
+@george
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

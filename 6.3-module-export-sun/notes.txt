@@ -1,0 +1,156 @@
+use for clock
+setInterval
+
+try not to use for clock... 
+setTimeout
+
+JSON
+serialization
+turning a variable into a string.
+var point = { x: 100, y: 100};
+
+JSON.stringify(57)
+"57"
+
+JSON.parse("57")
+57
+
+var str = "123";
+JSON.parse(str).length;
+
+you can save it in JSON to stringify data
+
+yaml (markup language) = official
+
+JSON expects quotes in the keys like:
+
+{
+  "movies": [
+    {  "title": "whatever" }
+    ]
+},
+
+unicode
+utf-8
+
+if you don't have the contents of the file then you wouldn't want to proceed.
+
+throw the error*
+
+throw and catch errors
+
+if (err) throw err
+
+playing chess by mail..
+
+File I/O
+modules/require
+Network
+
+
+.readFile("file.txt", function(err, content) {
+	err will always be error first and then content
+});
+
+google runs their code through an uglifier
+
+var print = console.log();
+
+print();
+
+"utf-8"
+
+ascii
+
+convert ones and zeros into characters
+
+buffer message in node will give u a hexadecimal message.
+
+html is text
+
+async defer attributes
+
+wc file.txt
+(word count)
+
+\n = new line
+
+\t = tab
+
+\b = backspace
+
+.unlink is rm
+
+any code that depends on the function... it needs to be inside because node is non blocking... it'll run the code before the function.
+
+makes it come out in the console as red.
+console.error("uhoh");
+
+
+an error is something that'll stop the program
+
+
+console.log for normal output.
+
+console.error will stop the program.
+
+console.warn will proceed anyway.
+
+ls > files
+creates a new file
+
+results.txt
+
+you can capture the results of ls into results.txt.
+
+ls foo > results.txt
+
+standard out and standard error
+you can split the output if you want..
+
+database = JSON.parse(contents);
+
+for (var key in database) {
+	console.log(key + ": " database[key]);
+}
+
+Assignment: mimic wc command in shell.
+
+you can just write:
+
+module.exports = {
+	f: function() {
+	return "My awesome function!"
+	}
+};
+
+
+(this will go in app.js)
+console.log( awesome.formatTime( new Date() ) );
+
+var express = require("express");
+you don't need the .
+
+var fs = require("fs");
+fs is the dependency
+
+download to your local folder...
+and link it in your html file.
+requireJS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

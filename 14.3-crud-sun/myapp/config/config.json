@@ -1,0 +1,13 @@
+{
+  "development": {
+    "storage": "app.db",
+    "dialect": "sqlite"
+  },
+  "test": {
+    "storage": "test-app.db",
+    "dialect": "sqlite"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}

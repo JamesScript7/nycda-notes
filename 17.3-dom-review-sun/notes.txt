@@ -1,0 +1,12 @@
+REVIEW-
+
+DOM - document object model
+
+(use rem (root em) instead of em)
+
+REACT uses a fake DOM and uses that update the real DOM
+
+no HTML to work with.
+
+guess the number exercise:
+

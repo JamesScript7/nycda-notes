@@ -1,0 +1,104 @@
+EXPRESS!!
+
+http://127.0.0.1:(whatever port u set)
+
+the url is made up of 3 parts:
+https://
+en.wikipedia.org
+
+/wiki/Main_page
+/wiki/United_States_Congress
+/wiki/Bud_dunn
+
+You can do it like a variable
+/wiki/TITLE
+
+/wiki/:title
+
+/content/about/us
+
+
+//http://localhost:3000/square/9
+
+app.get('/square/:num', function(req,res) {
+	var num = parseInt(req.params.num);
+	var square = num * num;
+	res.send(square.toString());
+})
+
+twitter.com/username is bad because what if..
+
+twitter.com/help
+twitter.com/legal
+...
+
+you can parse and stringify data
+
+one way to recieve data from forms:
+localhost:3000/users?id=123
+
+ex... youtube
+https://www.youtube.com
+/
+
+query string..
+
+app.get('/watch', function(req,res) {
+	var videoID = req.query.v;
+	console.log(res.videoID);
+}
+
+example.com
+GET /my/page?a=1&b=2&c=3
+
+$.get(URL, CALLBACK)
+
+
+
+you'll get back an object
+
+Statuses
+
+when you have a not_found route...
+
+200 is OK
+303 redirect
+
+400 is something wrong on the client side
+500 is something wrong on the server side
+
+app.get('/not_found', function(req,res) {
+	//correct way
+	res.status(404).send("404 Not Found");
+})
+
+
+in express you can only send string
+when you send a number its the browser info
+
+curl http://localhost:3000/
+
+curl -O https://en.wikipedia.org/wiki/Main_Page
+then you would download the whole page.
+
+curl -I https://en.wikipedia.org/wiki/Main_Page
+the you get the behind the scenes info
+
+curl -I https://en.wikipedia.org/wiki/Main_Page > myfile.txt
+
+tcp is how computers find each other
+
+!$
+
+
+
+
+
+
+
+
+
+
+
+
+

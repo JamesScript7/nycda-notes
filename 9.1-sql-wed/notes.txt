@@ -1,0 +1,231 @@
+What is a database?
+
+SQL and NoSql
+
+structured query language
+
+you have to predefine what the structure should be.
+
+makes the data predictable but less flexible
+
+changing schema requires "migrations"
+
+DMS: (the database, the software)
+database management system
+
+PostgreSQL
+
+NoSQL:
+unstructured. looks like JSON
+
+MongoDB, Redis, Cassandra, CouchDB
+
+SQL:
+
+tables are the primary structure of data
+
+sqlite.org
+
+
+so it has rows and columns:
+
+Strings are called VARCHAR
+longer text data than varchar title TEXT
+Floats are called DECIMAL
+Dates are called DATETIME
+
+it has a unique identifier to get to the data
+
+id 1, 2, 3.
+
+it is auto incrementing
+
+
+
+
+CREATE TABLE blog_posts (
+	"id" INTEGER,
+	"title" VARCHAR(255), //maximum size of data?
+	"body" TEXT,
+	"timestamp" DATETIME
+);
+
+.schema
+will tell you al your tables in the database
+
+"--" is to comment
+
+
+sqlite3
+
+.read blog.sql
+
+.schema
+
+
+";" at the end is very important. it will keep on waiting if you don't add that.
+
+.open something.db
+
+step 1:
+
+sqlite3 mydata.db
+
+step 2:
+
+enter the data
+
+step 3:
+
+
+
+
+
+
+Constraints
+PRIMARY KEY:
+AUTOINCREMENT:
+UNIQUE:
+NOT NULL: important for columns u don't want to leave blank
+
+DEFAULT:
+
+ex:
+
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"title" VARCHAR(255) UNIQUE NOT NULL,
+	"body" TEXT NOT NULL,
+	"timestamp" DATETIME
+
+INSERT INTO blog_posts
+(title, body, timestamp)
+VALUES (
+	"First Post!",
+	"Hello, World!",
+	DATETIME()
+);
+
+VALUES = keyword
+
+How to retrieve data
+SELECT * FROM blog_posts;
+
+SELECT * FROM blog_posts WHERE id=1;
+
+SELECT * FROM blog_posts WHERE title='First Title';
+
+sequelize
+
+sqlite only seaches on one web server...
+sometimes there can be many web servers
+
+SELECT title from blog_posts;
+
+keep the keywords capitalized.
+
+select title from blog_posts where id=2;
+
+single quote for strings
+
+ex:
+title='first';
+
+% = ...
+
+SELECT * FROM blog_posts
+WHERE title LIKE 'First%';
+
+
+SELECT DATETIME();
+to get current time
+
+for postgres it might be different like now();
+
+
+
+to count the number for blog_posts:
+
+SELECT COUNT (*) FROM blog_posts WHERE id > 1;
+
+to select the max id;
+SELECT MAX(id) FROM blog_posts;
+
+
+'' for string
+"" for column names and table names
+
+like comments in a different database than the posts.
+
+UPDATE blog_posts
+SET title='New Title'
+WHERE id=1;
+
+(Append only databases);
+
+DELETE FROM blog_posts
+WHERE id=1;
+
+(to look at a preview of what you want to delete)
+SELECT FROM blog_posts
+WHERE id=1;
+
+
+Paranoid Delete
+
+deleted BOOLEAN
+
+SELECT * FROM table WHERE deleted=false;
+					  or  active=true;
+
+UPDATE table SET active=false WHERE id=123;
+
+echo $PATH
+
+
+Speed up your queries
+
+
+SELECT * FROM blog_posts ORDER BY title;
+								  timestamp;
+								  timestamp DESC;
+								  timestamp ASC;
+
+
+CREATE INDEX blog_posts_title
+ON blog_posts (title);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

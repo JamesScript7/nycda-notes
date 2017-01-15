@@ -1,0 +1,144 @@
+File uploading:
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+	<input type="file" name="file-to-upload" />
+	<input type="submit" /> 
+</form>
+
+terminal:
+
+file
+
+user has to pick the file..
+you can't pick the file for them.
+
+alert is modal box..
+means you can't do anything else but deal with that popup...
+
+imagemagick.org
+
+
+example of clicking "like"
+
+400 error code comes from the user
+500 comes from...
+
+
+
+if you add the unique constraints you can stop people from liking many times...
+
+
+LOGIN session
+
+
+https://localhost:3000/inbox?user_id=12345
+
+gives you a unique code for a piece of text:
+
+shasum
+md5 (not secure anymore)
+
+"one way hash"
+
+not good:
+echo 'hello' | md5
+
+more secure:
+date | shasum
+
+
+echo 1 | shasum
+
+output of the first command.. | put into the second command
+
+
+
+
+https://localhost:3000/inbox?user_id=e5fa44f2b31c1fb553b6021e7360d07d5d91ff5e
+
+
+
+app.post("/like", function(req, res) {
+	var data = { req.body.photoID
+	};
+
+	data.userID = whoIsLoggedIn();
+
+	Like.create(data).then(function(result) {
+		res.json(result);
+	}).catch(function(err) {
+		console.error(err);
+		res.status(400).json(err);
+	})
+});
+
+
+var loggedInUsers = {};
+
+app.post("/login", function(req,res) {
+	// check username and password
+	// if successful:
+	
+	sessionID = genRandomCode();
+
+	// req.cookie.sessionID = sessionID;
+	loggedInUsers[sessionID] = userID;
+
+})
+
+app.get("/private", function(req,res) {
+	var sessionID = req.querystring.sessionID;
+	// var sessionID = req.cookie.sessionID;
+
+	var userID = loggedInUsers[sessionID];
+
+	if (userID == null) {
+		res.status(401).send("Not logged in!!!!!");
+		return;
+	}
+});
+
+COOKIE:
+session_id=e5fa44f2b31c1fb553b6021e7360d07d5d91ff5e 
+
+keep your sessions in the database or keep it in the cookie!
+
+the browser is keeping track of the sessionID not the server.
+
+ex:
+you can delete sessionID if logged in for less than 2 hours
+
+session is unique to each user
+
+sessionID is coming from the cookie
+
+server side session store
+
+SSS
+
+req.session = you end up with an object
+
+req.session.username = 'watever';
+(will go into a database or cookie);
+
+resetting session keys in heroku
+
+heroku config:set SESSIONKEY=alsjkdalksjd
+
+
+when you store the password into the database you should scramble it!!
+
+scramble data before it goes into the database!!
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,150 @@
+Q and A:
+
+planning a project:
+
+1.
+start with UX
+with wireframes
+draw out the framework of the website
+write down what technologies are needed
+label sections of the website
+
+2.
+keep track of routes:
+for ex:
+GET
+/
+/photos/:username
+		:userID
+
+/photos/:username/:photoID
+
+POST
+/upload
+
+3.
+Last thing is to think about the data:
+Photo
+userID 			___ unique
+original FN		_|
+
+PhotoCode (unique)
+caption
+
+
+MVP: minimum viable product
+
+lookup:
+AGILE, the philosophy of developing
+
+YAGNI
+(you aint gunna need it)
+GM (popular tech to add effects)
+
+include text files and readme's
+
+TDD: test driven development
+BDD: behavior driven development
+
+story: "User can upload photo with caption"
+
+
+TESTING:
+
+SUPERAGENT
+SUPERTEST
+
+Installing supertest: you don't need to test it on heroku.. only on your desktop:
+
+npm i supertest --save-dev
+
+if you install jasmine locally you have to specifay the route like this:
+./node_modules/jasmine/bin/jasmine.js
+
+
+jasmine && git push
+jasmine must pass in order for git to push
+
+model: usually refers to DB but also...
+
+
+you want app.js to be as lean as possible
+
+
+Broswerify:
+
+
+Sequelize:
+
+database migration
+a script file that will change the db for you
+
+file you can run to evolve your db
+global:
+npm install sequelize-cli -g
+locally:
+npm install sequelize-cli
+
+sequelize init will create in index.js for you
+
+DO
+up:
+
+module.exports = {
+	up: function(queryInterface, Sequelize) {
+		return queryInterface.createTable('users', { 
+
+		id: Sequelize.INTEGER
+
+
+		});
+	}
+}
+
+UNDO
+down:
+
+addIndex(table)
+
+
+
+never run a down migration in production!
+
+config.json
+
+:memory:
+
+sequelize.models
+
+docs.sequelizejs.com/en/latest/docs/models-definition/#validations
+
+examples
+
+type: Sequelize.DATE,
+defaultValue: Sequelize.NOW,
+min: Sequelize.NOW,
+allowNull: false,
+validate: {
+	isEmail: true,
+	len: [1, 140]
+}
+description: Sequelize.TEXT
+
+
+styling
+validation
+tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+*database migrations

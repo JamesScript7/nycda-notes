@@ -1,0 +1,112 @@
+look it up:
+document.forms []
+
+var e = $("<div>hi</div>");
+
+var guessTextBox = $("form.guessingGame input[name=guess]");
+
+var guessTextBox = $(this).find(["name=guess"]);
+
+one search for the text box in the whole page.
+
+two is to search within the form.
+
+third way is the use the this key word which refers to the form.
+
+switch:
+
+
+switch(x) {
+	case 1:
+		...
+		break;
+		(or)
+		return "...";
+	case 2:
+		...
+		break;
+	case 3:
+		...
+		break;
+	case 4:
+		...
+		break;
+	case 5:
+		...
+		break;
+	default:
+		console.warn("...")
+		return null;
+}
+
+add an invisible border or border box...
+
+$(event.target) selects current
+
+data-color="red"
+you can use the class to determine the color.
+
+data attribute is new in HTML5
+
+reseting class...
+
+listen for clicks
+grab color
+take the color1 + 2
+blend it
+get new color and that is the result.
+
+
+selecting elements changing elements and events
+
+
+NODE.JS!
+
+!$ is second hand for what last command you wrote.
+
+event driven... DOM stuff
+
+callback function will run when the file is ready
+node will open up the file but you don't have to wait for the file to finish loading...
+
+like an email... you send and wait for the other person before you can proceed.
+
+using callback functions to get the callback?
+
+promises.. their answer to callbacks inside callbacks inside callabcks...
+
+Node.js package ecosystem npm (collection of libraries)
+
+
+your whole website doesn't have to wait until the person clicks on the button...
+
+the onload callback...
+
+u have to be ready with the function
+don't wait for the page to load..as soon at pages load run function.
+
+
+npm cheat sheet
+
+express is an npm web server libraries
+database libraries
+
+localhost:8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

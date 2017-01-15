@@ -1,0 +1,129 @@
+JavaScript:
+
+but first... git review:
+git checkout -
+
+input - program - output
+
+programming concepts:
+variables, operators, conditionals, arrays, loops
+
+variables stores:
+integers
+floats
+strings
+boolean (after mathematician named Bool)
+dates/times
+more types...
+
+JS uses camelcase
+Ruby uses underscore
+
+variables are placeholders for data
+
+How to put JS in your webpage
+
+<script> </script>
+
+you can do % 60 to find out
+
+concat
+
+
+var s1 = 1;
+var s2 = 2;
+
+console.log(s1 + ", " + s2);
+
+debugging:
+console.log("s1 is now: "+ s1);
+
+so you can find out what the variable s1 is.
+
+! = not operator
+
+&&
+
+groups comparisons together
+every expression must be true to evaluate to true
+
+||
+
+if one of them are true then expression will evaulate to true.
+
+Conditionals
+
+"" = blank(empty) string
+
+Arrays:
+
+if you change index to a variable then you can use that to reference when calling an array
+
+var list = ["first", 2, "third"];
+
+var index = 0;
+
+list[index] = "1st";
+
+>> ["1st", 2, "third"];
+
+arrays are mutable?
+
+push = adds array item to the end of the list
+
+shift = removes last array item
+
+unshift = adds array item in front
+
+LOOPS:
+
+while
+
+var list = [1,2,3,4,5,6,7,8,9];
+
+var i = 0;
+
+while (i < list.length) {
+	console.log(list[i]);
+	i++;
+}
+
+javascript interpreter
+
+(initialize; condition; what to do after)
+
+while loop = when you don't know the number of times you have to loop.
+
+for loops = most common loop.
+
+when you want to increment by 2.
+i+=2
+
+assignment:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

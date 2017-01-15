@@ -1,0 +1,116 @@
+When you're inline, spaces in between html count.
+like in inline-block divs.
+
+img natural inline-block elements
+
+CSS reset
+
+program called tidy (write html for you)
+
+meyerweb.com/eric/tools/css/reset
+
+gets rid of default styles of the web browser
+
+normalize.css
+
+download it as an external style sheet
+
+---------------------------------------
+
+:hover
+
+psuedoclass
+
+a:hover {
+	
+}
+
+you can't hover over something that's hiding
+
+(this is how you make a drop down menu)
+
+positioning:
+move stuff around!
+
+static:
+
+relative:
+affects only the selected element!
+doesn't shift other elements on the line;
+
+position fixed:
+
+a fixed position element can cover up previous element.
+
+absolute positioning:
+
+the parent element needs to be relative for the sibling to be absolute!
+or else it'll go to the body element.
+
+
+z-index for foward back (a higher z-index will be in front)
+
+
+floats:
+
+float: left
+float: right
+
+
+you can use floats to make 2 column pages
+
+to get rid of inline block spaces... use float left.
+
+
+text will wrap around a float
+float will ignore height!
+
+clear will "draw a new line" and stop the float flow.
+
+clear left, right, or both
+
+tables!
+
+table tag
+
+no MORE!!!!
+
+display: table;
+
+google tables are evil
+
+why are they so hated for layout?
+
+box 2D JS
+
+free software organization
+
+fsf?
+
+copy-right? copy-left?
+
+creativecommons.org
+
+unix shell! what I'm using
+
+type top in shell.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

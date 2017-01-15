@@ -1,0 +1,104 @@
+	div {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	a {
+		width: 5em;
+		height: 5em;
+		margin: 5em;
+		display: inline-block;
+		border: solid 1px blue;
+		vertical-align: top;
+	}
+
+/* will affect divs with this class */
+	div.first-para p {
+		font-size: small;
+		color: green;
+		border: double 1px orange;
+		border-bottom-width: 10px;
+		padding: 10px;
+		width: 100px;
+	}
+
+/* will affect the p tag. div is the parent or relative element */
+	div p.second-para {
+		background-color: yellow;
+		font-size: 50px;
+		/* width em is relative to the font-size!!!*/
+		width: auto;
+		height: auto;
+	}
+
+/* very specific targeting */
+	div.fourth-para p.special-text {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 50px;
+		background-image: url("https://images2.alphacoders.com/966/96622.jpg");
+		color: silver;
+		text-align: left;
+		background-repeat: repeat-y;
+		/*background-size: auto;*/
+		width: 10em; 
+		height: 10em;
+		margin: auto;
+		padding: 50px;
+		/* cuts off the content that overflows. You won't see anything outside the box. */
+		/*overflow: hidden;*/
+		overflow: scroll;
+	}
+
+/*For block-inline examples*/
+
+	body {
+		margin: 0;
+	}
+
+	nav {
+		float: left;
+		width: 25%;
+		border: solid orange 1px;
+	}
+
+	section {
+		margin-left: 25%;
+		border: dotted blue 1px;
+	}
+
+	.container {
+		border: solid black 1px;
+		height: 200px;
+	}
+
+	.first {
+		width: 25%;
+		background-color: orange;
+		display: inline-block;
+		float: left;
+	}
+
+	.second {
+		width: 25%;
+		background-color: red;
+		display: inline-block;
+		float: left;
+	}
+
+	.third {
+		width: 25%;
+		background-color: green;
+		display: inline-block;
+		float: left;
+	}
+
+	.fourth {
+		float: left;
+		width: 25%;
+		background-color: pink;
+		display: inline-block;
+		float: left;
+	}

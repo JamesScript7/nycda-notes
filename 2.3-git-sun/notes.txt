@@ -1,0 +1,104 @@
+Version Control Notes, git:
+
+Supports parallel branching and merging
+
+git help
+
+git config --global user.name "James Kim"
+git config --global user.email james.kim7@yahoo.com
+git config --global core.editor nano
+
+More in programming:
+" u cant use special chars.
+' u can use special chars.
+
+'Hello, git!'
+
+! is a special chars.
+
+
+Working tree
+
+A commit is a snap shot of your project
+
+edge case - not the normal day to day usage... one in a million type of problem...
+
+git has a three layer repository system
+
+Working tree
+	Stage - index (staging area)
+		git data Base
+
+git diff commit# commit#
+to see the difference between those 2 git commits.
+
+git add .
+add everything in current directory
+
+ls *.html
+or
+ls worktree.*
+
+git show
+git log
+
+git status
+git add (to stage)
+git commit -m 'message'
+git show
+git log
+
+to delete
+git rm index.html
+
+git checkout
+will restore the last commit
+
+git reset
+will remove from staging area
+
+
+Branches!
+lets you make a complete copy of the code your working on.
+
+
+git diff bar (when you are in master, then it'll show you what's the difference.)
+
+git branch -d (safe delete, compared to -D) bar (will delete)
+
+merge:
+
+git merge whatever (be sure to be in the branch that you want to merge it into)
+
+Conflicts:
+
+github
+push and pull
+
+push is an upload and a merge
+
+pull is ur merging the commits from the server to your computer
+
+git clone http://....
+
+when adding a wild card, put it in quotes so that it not only adds files in the current directory but all of them.
+
+git add '*.txt'
+
+git remote add origin https://github.com/try-git/try_git.git
+
+-u
+tells git to remember the parameters.
+
+--staged
+type it with git diff --staged to see changes you just staged.
+
+git reset to unstage
+
+
+
+
+
+
+
+

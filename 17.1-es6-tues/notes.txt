@@ -1,0 +1,243 @@
+ES6
+
+ECMA - European Computer Manufacterer Association
+
+Default Arguments
+let/const *
+Arrow functions *
+Template Strings
+Classes *
+Import/Export (replaces "require")
+
+
+Old way:
+
+function sayHello(name) {
+	if (!name) {
+		name = "world";
+	}
+	return "hello" + name;
+}
+
+sayHello("class");
+sayHello();
+
+
+New way:
+
+function sayHello(name="world") {
+	return "hello" + world;
+}
+
+
+"let" is the new "var"
+
+if (true) {
+	var a = 1;
+	//we want the value for a to be contained inbetween the {}
+}
+
+console.log(a); //1
+
+using let:
+
+if (true) {
+	let a = 1;
+}
+
+if (true) {
+	let a = 2;
+}
+
+const:
+you can't change the value of a const (fixed value) single value and you set it once.
+
+Better to use Math.PI
+const PI = 3.14159...
+
+Arrow functions:
+
+Old way:
+
+$("#confetti-btn").click(function(event) {
+	playTrumpet();
+	fireCanon();
+});
+
+New way:
+
+$("#confetti-btn").click(event => {
+	playTrumpet();
+	fireConfettiCannon();
+}
+
+Old way:
+
+var squares = [2,4,6].map(function(x) {
+	return x * x;
+});
+
+to transform one list to a new list, use .map()
+
+so squares that was [2,4,6] will become [4,16,36].
+
+New way:
+
+let squares = [2,4,6].map(x => x * x);
+
+example:
+
+let timesTwo = [2];
+
+timesTwo.map(x => x * 2);
+
+
+Template Strings = Interpolated string
+
+return `Hello, ${name}`;
+
+
+Classes - Old way:
+
+function Square(length) {
+	this.length = length;
+}
+
+Square.prototype.area = function() {
+	return this.length * this. length;
+}
+
+var sq = new Square(2);
+
+console.log(sq.area()); // 4
+
+
+ES6 - New way:
+
+class Square {
+
+	constructor(length) {
+		this.length = length;
+	}
+
+	area() {
+		return this.length * this.length;
+	}
+}
+
+DANGEROUS EXAMPLE:
+
+String.prototype.toUpperCase = function() {
+  return this.toLowerCase();
+};
+
+"HeLLo".toUpperCase();
+
+//"hello"
+
+EXERCISE:
+
+class String {
+  
+  constructor(name) {
+    this.name = name;
+  }
+  
+  toUpperCase() {
+    return this.name.split("");
+  }
+  
+  toLowerCase() {
+    return this.name.toUpperCase();
+  }
+  
+  confuseMe() {
+    let x = this.name.split("");
+    return x.reverse().join(Math.random() * 10);
+  }
+}
+
+var str = new String("HELLOjelloHELLO");
+
+console.log(str.toUpperCase());
+
+console.log(str.toLowerCase());
+
+console.log(str.confuseMe());
+
+
+for Sequelize: a model is very much like a class...
+
+(on RoR models are classes)
+
+functions shouldn't know whats going on outside itself.
+
+
+blog:
+dailywtf
+
+2015 - ES6
+
+Babel - General purpose transipiler that transpiles your program from ES6 to ES5
+
+"use strict" on top in your script for ES5
+
+
+Node is an interpreter: (runs it immediately)
+it interprets the code and runs it takes in JS and runs in internally
+
+gcc is a compiler: (turns it into a program into ur computer)
+takes the code and turns it into 1s and 0s.
+
+JAVA - created the JVM (turns it into java code and runs)
+(intermediate - a virtual machine)
+
+transpiler - (taking one language and transpiling it another language)
+
+
+ELM-lang.org
+(competitor of React)
+
+YAGNI -
+you aint gunna need it
+
+SASS is going out of style
+
+you can in browser transpile.. but this is slower
+you can pre-transpile so it'll be done before production
+
+browserify.org
+gives you require in the browser
+
+webpack stuff (trendy stuff, might go out of trend later on)
+
+
+
+
+
+
+
+
+
+
+
+
+Import/Export
+(node doesn't support this one)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

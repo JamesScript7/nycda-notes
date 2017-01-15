@@ -1,0 +1,11 @@
+<link type="text/css" rel="stylesheet" href="./styles/main.css" />
+
+<script src="./main.js"></script>
+
+<% for (var i = 0; i < contact.length; i++) { %>
+<h2><%= contact[i].name %></h2>
+<p><%= contact[i].number %></p>
+<p><%= contact[i].address %></p>
+<% } %>
+
+<a href="/create">Add Contact</a>

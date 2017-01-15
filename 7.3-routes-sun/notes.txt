@@ -1,0 +1,165 @@
+you want to keep the request and response as light as possible...
+
+so:
+
+1. get the request
+2. run a function
+3. send a response
+
+sessions and cookies: yu can give each users their own number.
+
+get requests shouldn't change values in the script!
+
+Look up Query Strings...
+
+if you add this:
+?a=1&b=1&c=3
+then Express will store it as an object
+
+guess/5?confidence=high&temperature=high
+
+
+app.get('/add/:num1/:num2', function() {
+
+});
+
+
+/add/3/5
+
+
+good for optional stuff:
+used for tracking stuff... ex: ad on page 1 and ad on page 2
+
+add?num1=3&num2=5
+if you miss num2 then it won't break
+
+curl 'use single quotes when you have amperstand in the URL'
+
+
+Static files
+
+boiler plate examples:
+
+var folder = "public";
+var static = express.static(folder);
+app.use(static);
+
+-or-
+
+app.use(express.static("public"));
+
+
+app JS runs on the server side...
+
+and Browser JS runs on the client side (HTML, CSS, JS)
+
+
+set up a public foler... this will be accessible to the browser
+
+security aspect of having
+
+index.html will always match /
+
+conventional names:
+static and public
+
+server stuff goes in the main folder and
+client stuff goes in the public folder
+
+anything public is part of the route... you you don't have to type in public.
+
+the first url wins... it takes precedence.. so order ur URLS!!
+
+Don't let ur files compete with your routes
+
+//where the form actually submits too...
+action="http://example.com"
+//change this to:
+action="/guess"
+
+<form id="guessForm" action="/guess" method="GET">
+
+text box
+<input type="text" name="num" />
+<input type"submit />
+</form>
+
+
+.post
+
+anything that goes in views
+
+you have placeholder HTML and plug in JS
+
+TEMPLATES/VIEW
+
+.render turns view code and data into HTML string.
+
+this goes into your guess.ejs
+
+<% if (message) { %>
+	<p><%= message %></p>
+<% } %>
+
+<%data%>
+
+Express method
+
+.render
+
+
+one way not to 
+
+
+npm init
+
+npm install --save ejs express (whatever packages)
+
+when you clone a repo
+
+then
+
+npm install (this should download all the dependencies needed used)
+
+
+
+REVIEW:
+stuff that never changes in the public folder
+
+views folder will convert symbols in index.html
+
+anything in hello.ejs comes from that data object...
+
+you don't want to write functions in the ejs files.
+
+you don't want code smell.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

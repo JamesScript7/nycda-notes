@@ -1,0 +1,146 @@
+<!-- :hover,
+	CSSzengarden
+-->
+
+<head> != <header>
+
+Class name reflects the function rather than looks on the page!
+
+id is usually reserved for programming (JS) and not for CSS.
+
+/* CSS comment */
+<!-- HTML comment -->
+// JS single line comment
+/* JS multi line comment */
+
+
+Font Size
+
+font-size: small, large, 12pt, 12px, 150%, 1.5em;
+
+text-align: left, right, center, justify;
+(justify will create a nice line on the edges like on print)
+
+<meta charset="utf-8">
+
+unicodesnowmanforyou.com
+
+background-image: url('tiger.png');
+if you want a caption over the image.
+
+pete and "repeat" fell off a boat joke
+
+
+CSS LAYOUTS!!!
+
+You can add a width to an element:
+width: 50%, 125px, 15em, auto;
+
+<em> is used for emphasis for blind users and not to italisise(?)
+
+height: will usually be auto if not specified.
+
+div is typically 100% width.
+
+Height percent only works if the parent element has a set height!
+
+min-width: 100px;
+max-width: 50%;
+min-height: 15em;
+max-height: 100px;
+
+Margin and Padding!
+
+Margin is space outside the box
+Padding is space inside the box
+
+Regarding "overflow: scroll;"
+You usually want one scrolling element in a page.
+
+HACK:
+If you want everything to be 6px but not left:
+
+margin: 6px;
+margin: 10%;
+
+margin shorthand:
+if you give 1 input it's all around
+
+if you give 2 inputs it's top/bottom left/right
+
+if you give 3 inputs it's top left/right bottom
+
+top/bottom is 0 and auto left/right
+margin: 0 auto;
+
+border!
+double, dashed, dotted, solid
+
+border-bottom-width: 10px;
+
+* MARGIN, PADDING, WIDTH, HEIGHT most used and important *
+
+Box model!
+
+width used to mean only content... without boarder, padding, and margin.
+
+new rule
+only content width. ur adding padding
+box-sixing: content-box;
+
+up to border... ur subtracting padding
+box-sizing: border box;
+
+* is universal for everything
+
+* {
+	box-sizing: border-box;
+}
+
+Display types:
+block, inline, inline-block, none;
+
+block elements: starts a new line and takes up 100% of the width.
+
+inline: can only have left/ right margins. stays on the same line. cannot have set dimensions.
+
+span, em, a, strong
+
+inline ignores width, margin, height
+
+
+inline-block is a hybrid:
+it's horizontally organized blocks.
+
+vertical-align!!! bottom or top or middle;
+important when ur dealing with inline elements.
+
+display: none;
+will hide things and take it out of the line.
+mainly used for programming. JS
+
+flex box, new thing
+
+:hover
+
+csszengarden
+
+try to see what happens when you have 3 inline-block next to each other.
+
+
+Assignmnet 1.3 is due sunday
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

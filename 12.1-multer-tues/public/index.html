@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		File Uploading
+	</title>
+	<style type="text/css">
+		html {
+			font-family: helvetica, sans-serif;
+			background-color: lavender;
+		}
+
+		h1 {
+			text-align: center;
+		}
+		div {
+			width: 600px;
+			margin: 0 auto;
+			border: solid darkgrey 5px;
+			padding: 50px;
+			text-align: center;
+			background-color: snow;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Upload your photo!</h1>
+
+	<div>
+		<form action="/upload" method="post" enctype="multipart/form-data">
+			<input type="file" name="file-to-upload" />
+			<input type="submit" /> 
+		</form>
+
+	</div>
+
+</body>
+</html>

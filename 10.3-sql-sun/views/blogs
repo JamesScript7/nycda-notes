@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+
+
+<body>
+	<table>
+		<thead>
+
+			<tr>
+				<th>Title</th>
+				<th>Body</th>
+			</tr>
+		
+		</thead>
+
+		<tbody>
+
+			<% for (var i in blogs) {%>
+			<td><%= blogs[i].title %></td>
+			<td><%= blogs[i].body %></td>
+			<% } %>
+
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+EXPRESS REVIEW:
+
+listens for http request
+"route" requests
+
+http lib in node to create you won version for express if you want.
+
+(will go over sending JSON when reaching AJAX)
+
+types of views:
+EJS
+Pug
+
+POST requests:
+gernerally happening when sending a form.
+
+uploading a video: POST req
+finding a video: GET req
+
+any url you type into a browser... GET
+filling out a form... POST
+
+You have to install this to use POST request:
+
+npm install --save body-parser
+
+JSON:
+app.use(bodyParser.json());
+
+FORM:
+app.use(bodyParser.urlencoded({ extended: true}));
+
+app.post('/guess', function(req,res) {
+	var guess = req.body.guess;
+	...
+	res.send(msg);
+}
+
+
+get req: item potent. you get a specific thing.. it should not change the contents of the server... for reading
+
+post req: not item potent. you're allowed to change something on the server. posting email, tweet, etc. you'll get something different in your inbox or page... for posting. MORE SECURE. the proper way to get real data into the server.
+
+REST: way to map the get and post system in the database.
+
+
+post: you don't see it on the address bar.
+
+
+content type:
+app.get('/some/route', function(req,res) {
+	res.set('Content-Type', 'text/html');
+	res.send("<h1>HTML</h1>");
+})
+
+can be: text/plain, image/pic.png, application/javascript
+
+
+Middleware:
+a function that runs
+
+so place it before your route
+
+you can keep track of logging in.
+
+app.use(function(request, response, next) {
+	var d = new Date();
+	if (d.getHours() > 18) {
+	response.status(401).send("sorry, we're closed");
+	} else {
+		next();
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

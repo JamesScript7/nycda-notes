@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Partials!
+	</title>
+</head>
+<body>
+	
+	<div>
+		<% include ../partials/head %>
+	</div>
+
+
+	<div>
+		<% include ../partials/body %>
+	</div>
+
+	<div class="search-result">
+		<h3>
+			<a href="<%= url %>?src=from-title">
+				<%= result.title %>
+			</a>
+		</h3>
+		<div class="link">
+			<a href="<%= result.url %>?src=from-link"></a>
+		</div>
+
+		<div class="description">
+			<a href="<%= url %>?src=from-link">
+				<%= result.description %>
+			</a>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

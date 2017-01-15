@@ -1,0 +1,98 @@
+Deploying Node to Heroku
+
+Heroku: hosting a web application
+
+efemeral?
+
+Heroku is the fastest way to get your web app on the web (not the only way...)
+
+
+DevOps! (hot field)
+
+heroku ps
+will tell you everything thats running in your account
+
+
+In the terminal:
+
+heroku --version
+
+heroku login
+heroku create
+
+git push heroku master
+heroku ps
+
+heroku open
+
+heroku addons: create heroku-postgresql:hobby-dev
+
+Connect with process.env.DATABASE_URL in your app
+
+var sequelize = new Sequelize(process.env.DATABASE_URL);
+
+
+
+export NAME=JAMES
+
+
+
+setting the environment in heroku!
+
+app.set('port', (process.env.PORT || 5000));
+
+
+
+heroku pg:psql
+
+/dt is like .schema in sqlite3
+
+
+
+Agnostic:
+
+you know your connecting to a database but you don't care what it is. On whatever,it should work.
+
+You want to be agnostic to the URL.
+
+submits a post request:
+curl -d 'name=cowboy&material=wool' http://...
+
+var db_url = process.env.DATABASE_URL
+
+postgres:
+
+instead of having the db in your app... postgres moves it into another server with login in the way.
+
+postgress:
+npm install --save pg
+
+
+You don't need this on heroku!
+dev dependencies: sqlite3
+
+heroku logs
+
+
+
+models.sequelize.sync().then(function() {
+		
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+SQLITE:
+
+<% include ../partials/head %>
+
+this uses js and database in the server side
+
+
+example:
+
+header.ejs
+menu.ejs
+
+servers providing data
+and browsers are doing all the work
+
+react is heavy..
+
+ejs is a big shovel and react is a bull dozer.
+
+you can put <%= %> in classes too.
+
+
+you only get the html: (use for partials)
+<%- %>
+
+
+use <%= %> for partials you trust.
+
+you can link css
+
+in the terminal: look up:
+-tidy
+
+API
+application programming interface
+
+an interface to connect something.
+
+XML alternative to json?
+
+you can't really make a req from your browser to external API
+
+Cross-origin resource sharing (CORS)
+
+you make ajax req to different servers.
+
+superagent
+
+npm install superagent
+
+var request = require('superagent');
+
+.get(url)
+.query(queryData)
+.end(fucntion(err,res) {});
+
+
+cat !$ | strings | grep
+
+curl ''
+
+example:
+data.query.pages["1234"].title
+
+(programmatic interface rather than user interface)
+
+action=edit,delete,watch,wikilove
+(watch: you can get an email on wat ur watching)
+
+sequelize
+npm install --save sequalize
+
+wiki/Special:RecentChanges
+
+
+var request = require('superagent');
+const = wikiApiUrl = "";
+var title = "Hypertext Transfer Protocol";
+
+queryData = {
+	action: "query",
+	prop: "revisions",
+	rvprop: "content",
+	format: "json"
+};
+
+queryData["titles"] = title;
+
+request
+	.get(wikiApiUrl)
+	.query(queryData)
+	.end(function(err,res) {
+	//.ok = 200 which means ok
+	if (err || !res.ok) {
+		console.log(err.toString());
+	} else {
+		var page = res.body.query.pages["13443"].revisions[0]["*"];
+		console.log(page);
+	}
+	})
+
+
+o = {
+	a: 1,
+	b: 2
+}
+
+Object.keys(o);
+
+
+console.log(res.body);
+
+node superagent.js | wc
+
+API's
+
+http://developer.nytimes.com/
+https://api.nasa.gov/
+http://omdbapi.com/
+
+offline applications:
+
+offline first (about going to space ;))
+
+have fallbacks incase your API doesn't work.
+
+twitter has their own npm install twitter
+
+status.net?
+
+npm init
+
+description:
+entry point:
+license: GPL-3.0
+
+npm i express --save
+
+devDependencies
+
+will install all the dependencies in the json file
+
+npm install
+
+you can create package.json
+with just {} inside
+
+and it'll automatically update that file
+
+CRUD
+
+Create
+Retrieve
+Update
+Destroy
+
+REST
+
+REpresentational State Transfer
+
+POST /articles -> Create
+
+GET /articles -> Read(list)
+
+GET /articles/123 -> Read(item)
+
+GET /articles/123 -> Update
+
+DELETE /articles/123 -> Delete
+
+(some sites will fake deletes)
+
+restful
+
+
+http://jsonplaceholder.typicode.com/
+
+(should be installed globally)
+
+npm install -g json-server
+
+(to make a file with content inside)
+echo '{}' > package.json
+
+where is the global file exactly..
+
+to change port in terminal
+-p 3001
+
+creating your own API... with json
+
+{
+	"movies": [
+		{
+		"id": 123,
+		"title": "batman"
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

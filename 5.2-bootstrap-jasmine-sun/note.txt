@@ -1,0 +1,150 @@
+you don't need a multiplier object when you can just use a function...
+
+Jasmine.github.io!
+
+namespace...
+
+in js = math.round() <- round is part of the Math object
+in php = math_round <- is a function
+
+
+UNIT TESTING: (spec's)
+
+You know what the input should be and you know what the output should be...
+
+"expect" "assert"
+
+Test suite ex:
+Math.round(3.14) == 3
+Math.round(3.8) == 4
+
+you need good test coverage..
+it helps you plan ahead before actually writting it.
+
+TDD - test driven development
+
+describe("Addition", function(){
+	it("should give us a basic sum", function() {
+		expect(1+1).toBe(2);
+	});
+});
+
+describe it and expect it to be...
+
+describe(NAME, SUITE_FUNCTION);
+it(DESCRIPTION, TEST_SUITE);
+
+expect(2+2).not.toBe(5);
+
+Interchangable:
+
+.toBe
+.toEqual
+
+var x;
+this equals to null (non-value) because it is defined but nothing is asigned...
+
+undefined use to equal null but now they don't
+
+Also, don't code around undefined! it's called code smell.
+
+null is generally the best stand-in for nothing.
+
+SeleniumHQ
+capybara test
+
+SASS (program that runs in the shell)
+sass is the input and css is the output
+
+sass-lang.com
+
+sass gives you variabled in css
+
+You can create "variables" in css.
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+NESTING
+
+nav {
+	ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+}
+
+you import other css file into current css.
+
+@mixin
+@import
+
+
+lesscss.org
+
+lesscss sass.. the result is css...
+
+coffescript/typescript***
+
+BOOTSTRAP
+uses less
+
+
+THE GRID:
+it gives us a 12 column grid
+<-12->
+<-6-><-6->
+<-4-><-4-><-4->
+<-4-><-8->
+x<-10->x
+(offset, not use the first and last column)
+<-3-><-3-><-3-><-3->
+<-3-><-6-><-3->
+
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4"></div>
+	<div class="col-md-4"></div>
+</div>
+
+just have it equal to 12
+
+grid options..
+
+.col-xs-
+.col-sm-
+.col-md-
+.col-lg-
+
+.hidden-xs then it'll be hidden on an xs screen
+
+Apache
+
+hidden-xs
+hideen-sm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

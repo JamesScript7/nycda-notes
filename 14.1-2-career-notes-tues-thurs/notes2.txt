@@ -1,0 +1,148 @@
+Andrew Lum
+
+tradeoffs?
+sometimes you have to program for lowest cost instead of elegant code.
+
+machine learning:
+
+gradient boosting
+
+for freelance
+quora?
+toptal
+upwork
+craigslist
+
+
+hello@andlum.com
+
+github/andlum
+
+
+
+*ask questions!
+
+
+Juvoni
+
+Hackathons
+
+side projects
+
+various algo challenges for the interview:
+
+leetcode.com
+
+big o notation
+linear or...
+
+agile development
+
+soft skill tips:
+
+learning how to ask/form the right question to whom to ask also when to ask.
+
+clean up code if you can.
+
+Don't take the code you write too personally.
+learn how to give constructive feedback.
+
+the JS fatigue?
+
+mentors are important
+
+getting a foot in the door?
+
+journal website:
+750words
+
+specific steps to get to the interview stage
+
+have a personal website
+linkedin
+be discoverable online
+hired.com
+fettery
+opensource
+work on the company's opencourse material
+
+
+competitor to REACT:
+view.js
+
+
+
+the effective engineer:
+*hackernews.com
+reddit
+
+juvoni.com
+juvonib@gmail.com
+
+twitter:
+@juvoni
+
+
+
+react meetup at amex?
+brooklynjs
+node meetup
+manhattenjs
+geonyc
+lawtech
+fintech
+
+
+
+
+
+scala to handle lots of data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(join table)
+user        JT      Tweets
+1			O		1
+2					2
+			O
+					3
+			O
+					4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

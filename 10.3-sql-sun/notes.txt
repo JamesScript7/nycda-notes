@@ -1,0 +1,89 @@
+sequel
+
+making queries:
+
+hasOne, findAll, hasMany, belongsToMany...
+
+documents are the way to learn (after school)
+
+User.hasMany(Picture)
+User.belongsTo(Picture, {})
+
+user.getPictures()
+
+
+example:
+
+Picture.belongsTo(User);
+
+Picture.findById(1).then(function(picture) {
+	picture.getUser().then(function(user) {
+
+	})
+})
+
+Student.belongsToMany(Course, { through: 'Enrollments'})
+
+Course.belongsToMany(Student, { through: 'Enrollments'})
+
+student.getCourses().then(...)
+course.getStudents().then(...)
+
+models.sequelize
+
+
+
+Something.sync().then(function() {
+	app.listen(3000);
+})
+
+
+//////
+
+var BlogPost = require("blogPost");
+
+
+in blogPost.js:
+
+var BlogPost = sequelize.define("BlogPost", {
+	title: DataTypes.STRING,
+	body: DataTypes.STRING
+})
+
+sequelize/express-example
+
+console.log(process.env); = SHELL
+
+export NODE_ENV=test
+export NODE_ENV=production
+
+you can change the context from the shell..
+
+//
+
+var config = require('config');
+config[env];
+
+docs.sequelizejs.com/en/1.7.0/articles/express/
+
+
+like a post response in curl:
+curl -d
+
+***
+transactions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

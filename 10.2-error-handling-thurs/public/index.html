@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+	<script>
+		$(document).ready(function() {
+			$.get("/blog.json", function(data) {
+				console.log(response);
+		});
+
+	});
+	</script>
+
+	
+
+
+</head>
+<body>
+	<form action="/create" method="post">
+		<div class="title">
+			Title: <input type="text" name="title" />
+		</div>
+		<div class="body">
+			Body: <textarea type="text" name="body"></textarea>
+		</div>
+		<div class="submit">
+			<input type="submit" value="Post" />
+		</div>
+		
+	</form>
+
+</body>
+</html>

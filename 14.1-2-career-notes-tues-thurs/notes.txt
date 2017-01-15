@@ -1,0 +1,63 @@
+Chris - FS engineer
+
+seek out any op thats not remote work. seek mentorship.
+
+seek out senior mentorship
+civic tech.. go to hackathons and meetups..
+
+ES6 + ES7
+
+(3D in the broswer)
+
+justfix.nyc
+
+
+
+Dale - OKCupid
+
+OKtrends
+
+programming questions:
+book: cracking the coding interview
+traverse the binary tree
+sorting
+recursion
+
+*don't not want technical input! always ask questions to the interviewer and take their input
+
+react?
+
+dale@okcupid.com
+chris@cjroth.com
+amy@live.xyz
+
+diffing engine: 100 diff operations and only shows up as 3 
+(performance gain!)
+
+checkout open source projects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

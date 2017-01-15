@@ -1,0 +1,111 @@
+/* Class/Object to model a status update
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+jQuery vs. "vanilla"
+(framework)
+
+instead of
+document.getElementById("example");
+
+$(...);
+-or-
+jQuery(...);
+
+
+CSS goes in there...
+
+Use css selectors with jQuery:
+$(".foo .bar")
+$("div.foo div.bar")
+$("div div")
+
+benefit from using CDN:
+(content delivery network)
+
+pros:
+1. you don't have to worry about bandwidth on your website.
+2. less downloading work because you might already have downloaded it before.
+
+downside:
+drawback is your getting someone else's server on your page.
+if their server goes down then it'll affect your website.
+
+trick:
+have both available but you have to use something like apache.
+
+$("send").hide(); (changes to display: hidden)
+$("send").how(); 
+$("send").text("done!");
+$("send").show.text("done!"); (this is so you DRY)
+
+
+first change the text and then show the element
+
+Manipulation
+.hasClass("foo") will return true or false
+.addClass("bar")
+.removeClass("etc")
+.append("")
+
+DOM nowdays have a built in "$"" so be aware.
+
+$("send").click(function() {
+	alert("sent!");
+})
+
+$("send").trigger("click");
+
+$("send").html(); (jQuery gives back current value... get the HTML. It gets the value.)
+
+(this is setting... this will assign the value in thie the () )
+$("send").html("Send NOW!");
+
+
+depending on the number of parameters
+//get
+$(".send").css("color");
+//set
+$(".send").css("color", "blue");
+
+var element = $("send").css();
+
+
+longcut
+$("button").on("click", notify);
+
+Assignment!!! (practice git)
+Work on guess the number with jQuery
+versions:
+
+popup
+DOM
+jQuery
+
+this will run after the website has loaded
+
+$(function() {
+	$("#clickme").hide();
+})
+
+$(onload);
+
+$(document).ready(onload);
+
+
+
+
+
+
+
+
+
+
+
+

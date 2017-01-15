@@ -1,0 +1,139 @@
+REACT!
+
+a JS library for building user interfaces
+
+<Mario class="big" />
+
+<Mario size="{this.size}" />
+
+
+*the state informs the view
+
+state of the app determine how the app would look like.
+
+<ComposeWindow className="{this.windowStatus}" />
+
+angular you build directives
+react you build components
+
+REACT is fast.
+
+states = collection of attributes.
+
+JSX: extended javascript... you need to transpile it.
+
+return has to be one element: like one <div>
+
+<div id="container"></div>
+
+<script type="text/babel">
+	var HelloWorld = React.createClass({
+		render: function() {
+			return <div> Hello World </div>
+		}
+	});
+
+	ReactDOM.render(<HelloWorld />, document.getElementById("container"));
+</script>
+
+
+RESULT:
+
+<div id="container">
+	<div> Hello World </div>
+</div>
+
+App is a component
+
+
+ReactDOM.render(
+	<App />
+	document.getElementById("root");
+);
+
+**ES6:
+export default Hello;
+
+
+*object oriented inheritance
+
+ES5:
+var App = React.createClass({
+	render: function() {
+		return <div> Hello World </div>
+	}
+})
+
+
+ES6:
+class App extends Compenent {
+	render() {
+		return (
+			<div></div>
+		)
+	}
+}
+
+Component example:
+
+"class" is a key word so we have to use "className"
+
+<div className="main">
+	<Header name="World" />
+	<NavBar />
+	<Footer />
+</div>
+
+exercise: create a new component
+express my-app --view=ejs
+create-react-app my-app
+
+*npm run build 
+
+you can pretty-ify your html
+
+you can output commands to your copy and paste
+tidy -i /dev/null | pbcopy
+
+npm run build
+
+1. npm start
+
+<div> lowercase = html tag
+<Hello> Capitalized = component
+
+
+class Link extends Component {
+  render() {
+    return (
+    <Hello name="React" />
+      <div class="hello">
+        <h1>Hello, React</h1>
+      </div>
+    );
+  }
+}
+
+{this.props.name}
+
+2 diff components with two diff properties
+
+components have all the power of classes and objects.
+
+components are groups of tags that have functionality
+
+
+functions are useful to store event handlers
+
+
+
+
+
+
+
+
+
+
+
+
+

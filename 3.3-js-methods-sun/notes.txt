@@ -1,0 +1,161 @@
+Methods!
+
+.split(); for strings to array
+.join(" "); for arrays to strings
+.replace(whatever you want to replace, to the new value you want to replace);
+
+Look up - javascript recursion!!
+using the function within the function in place of a "for loop"
+
+var number = 90210;
+number.toString().split().reverse();
+
+
+var answer = [];
+answer.push(number % 10);
+number /= 10;
+number /= 10;
+number = Math.floor(number);
+
+keep dividing by ten to move the decimal point to the left.
+
+10000 * Math.round(round / 10000);
+
+number.toString.split().reverse();
+
+Functions:
+will take input and return some sort of output
+
+
+function sayHi() {
+	console.log("Hi!!!");
+}
+
+sayHi();
+
+
+THIS IS WHAT IS TRENDING RIGHT NOW
+
+var sayHi = function() {
+	console.log("Hi!!!");
+};
+
+
+var test = function(x) {
+	console.log(x + " is what you put in.");
+};
+
+test("hello");
+
+null is like false, undefined...there's nothing there...
+
+make a function countwords
+
+
+
+isNaN(arguement)
+
+typeof x === 'string'/'number'
+
+isNaN(x) === true
+
+
+odd  numbers is (i * 2 + 1);
+
+Callback functions!
+
+var f = function (x) {
+	return x;
+}
+
+function callThreeTimes(f) {
+	f();
+	f();
+	f();
+}
+
+run this function everytime this button is clicked
+
+
+
+
+anonymous function.. it only uses it once, its not saved
+
+
+
+hashes/dictionaries
+
+JSON
+javascript object notation.
+
+new kind of data structure.
+
+key-value data structure.
+
+var movie = {
+	"title": "Star wars",
+	"year": 1977,
+	"director": "George Lucas"
+}
+
+var movie = {};
+movie["title"] = "Star wars";
+movie.title = "Star wars";
+
+var movie = {};
+var key = "title";
+
+movie.key = "Star Wars";
+
+functions in hashes
+
+var o = {
+	"f": function() {
+
+	},
+}
+
+o.f();
+
+var console = {
+	"log": function(text) {
+
+	}
+}
+
+var movies = [
+	{
+		"title": "star wars"
+	},
+	{
+		"title": "etc"
+	}
+
+]
+
+movies[0]["title"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

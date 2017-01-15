@@ -1,0 +1,20 @@
+@Krystal
+@Amanda Zamurs
+
+AJAX
+
+you load the route instead!
+
+jQuery:
+
+$.get("/date", function(response) {
+	$(".message").html(response);
+});
+
+you can have a browser event trigger get request
+
+$.post("/search", {q: "cat pics"},
+function(results) {
+	$("#results").
+});
+

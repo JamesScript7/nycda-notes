@@ -1,0 +1,82 @@
+Closures
+
+//just don't use global variables.
+
+(function() {
+	var name = "James";
+	console.log("hello" + name);
+})();
+
+it isolate variables. one time use function.
+
+It's a way to run code without it exposing it to the global name space.
+
+It's a way not to make global variables.
+
+Objects
+
+kind of like using 2 arrays...	
+
+for (var letter in letterCount) {
+	console.log(letter + ": " + letterCount[letter]);
+}
+
+there is a way to sort the keys...
+
+domain of the problem...
+you have to look up and research what you're going to work with.
+
+use this.total = global object but within the object scope...
+
+you can use console.log(); to check...
+console.log(this);
+
+we're gunna learn how to reuse objects.
+
+DOM - Document Object Model
+css-tricks.com/dom
+
+all html objects gets loaded into document
+
+(element objects)
+ex:
+document.title;
+
+document.title = "new title!"
+document.body = 
+
+
+.innerHTML controls everything in <HTML>
+
+<h1 id="headline1">hello!</h1>
+document.getElementById("headline1")
+
+example:
+.getElementsByTagName("li");
+
+you will get an array of element objects.
+soo....
+listItems[0].innerText == "First";
+
+<ul class="list">
+.getElementsByClassName("list");
+
+
+you can get specific...
+var lists = document.getElementsByClassName("list");
+
+var ul = lists[0];
+
+like ul.getElementsByTagName("li");
+
+
+
+
+
+
+
+
+
+
+
+
