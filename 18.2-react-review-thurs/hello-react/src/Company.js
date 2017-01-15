@@ -4,8 +4,8 @@ class Company extends Component {
 
   constructor(props) {
   	super(props);
-  	console.log("in Company constructor");
-  	console.log(props);
+  	// console.log("in Company constructor");
+  	// console.log(props);
 
   	// getting into state
   	// this.state = {};
@@ -15,8 +15,8 @@ class Company extends Component {
   }
 
   speak() {
-  	console.log("in speak");
-  	console.log(this);
+  	// console.log("in speak");
+  	// console.log(this);
   	alert(this.props.sponsor);
   }
 

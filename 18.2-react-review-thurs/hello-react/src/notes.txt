@@ -1,0 +1,58 @@
+REACT workshop:
+
+parseInt("10", 2);
+
+parseInt("FF", 16);
+
+
+Go language is the fastest Language out there
+
+node is based off of V8 engine
+
+
+"jest" is designed to test components
+
+setState tells react something changed
+it'll call render again to refresh the info
+
+saving state b4:
+
+<div class="counter" data-value="1">
+<span class="value">1</span>
+</div>
+
+you have a seperation of DOM with REACT
+jQuery has to pull info out of the DOM and put it back in
+
+make an automatic default for props
+
+or a warning in the constructor
+if (!props.start) {
+	console.warn("");
+}
+
+
+Have a button cycle through an array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
