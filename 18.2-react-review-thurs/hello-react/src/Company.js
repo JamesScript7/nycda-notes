@@ -22,12 +22,18 @@ class Company extends Component {
 
   render() {
     return (
-    	<div className={this.props.name + this.props.sponsor}>
-    		The {this.props.name} is sponsored by...
-    		<div>
-    			<button onClick={this.speak}>Find Out</button>
-    		</div>
-    	</div>
+      <div>
+
+        <div className={this.props.name + this.props.sponsor}>
+
+      		The {this.props.name} is sponsored by...
+          
+      		<span>
+      			<button onClick={this.speak}>Find Out</button>
+      		</span>
+
+      	</div>
+      </div>
     );
   }
 }

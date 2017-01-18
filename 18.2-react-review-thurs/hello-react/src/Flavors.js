@@ -17,7 +17,9 @@ class Flavors extends Component {
 		this.flavors = {
 			name: ["Mocha", "Caramel", "Peppermint", "Green Tea", "Chai"]
 		}
+
 	}
+
 
 	prev() {
 		if (this.state.value <= 0) {

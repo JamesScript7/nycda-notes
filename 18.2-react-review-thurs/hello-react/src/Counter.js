@@ -45,6 +45,9 @@ class Counter extends Component {
 
 				<h1>Counter Test</h1>
 
+				<div>The minimum is: {this.min}</div>
+				<div>The Maximum is: {this.max}</div>
+
 				<button onClick={this.decrement}> - </button>
 				<span> {this.state.value} </span>
 				<button onClick={this.increment}> + </button>

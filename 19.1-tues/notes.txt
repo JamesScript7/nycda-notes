@@ -1,0 +1,52 @@
+http://www.threejs.org
+
+svg-wow.org
+
+look up APIs and what you want your final project to be.
+
+twilio, google, twitter, ny times, stripe.
+
+eye detection API?
+
+google has an API that can read text in a picture.
+
+REACT!
+
+you can install bootstrap components for REACT
+
+*declaritive
+
+THIS LOOP IS THE KEY:
+
+this is -props
+		-AJAX--v
+
+	Event -> State -> View 
+	  ^----------------|
+	(can also have an event)
+
+
+State <-----> State
+  ^--> Redux <--^
+
+
+ternary expression:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
