@@ -2,6 +2,12 @@ var express = require('express');
 var app = express();
 var port = 3000;
 
+var Mta = require('mta-gtfs');
+var mta = new Mta({
+  key: '86e1d2df9ba31c6754e75db39b3972e3', // only needed for mta.schedule() method
+  feed_id: 1                  // optional, default = 1
+});
+
 
 //body-parser: for post requests
 var bodyParser = require('body-parser');
@@ -44,7 +50,11 @@ app.get('/some/route', function(req,res) {
 	res.send("<h1>HTML</h1>");
 });
 
-
+app.get('/mta', function(req,res) {
+	mta.status('subway').then(function (result) {
+	  console.log(result);
+	});
+})
 
 
 

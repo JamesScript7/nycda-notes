@@ -24,7 +24,7 @@ class OddOrEven extends Component {
 		event.preventDefault();
 
 		let msg
-		if (this.state.guess == this.answer) {
+		if (this.state.guess === this.answer) {
 			msg = "you got it! Try again!";
 			this.answer = this.pickNumber();
 		} else if (this.state.guess > this.answer) {
@@ -32,7 +32,7 @@ class OddOrEven extends Component {
 		} else if (this.state.guess < this.answer) {
 			msg = "too low!";
 		} else {
-			msg = "i dunno";
+			msg = "I didn't understand that...";
 		}
 
 		this.setState({message : msg})
@@ -49,7 +49,6 @@ class OddOrEven extends Component {
 			
 			<form className="Guess" onSubmit={this.onSubmit}>
 				<input type="number" onChange={this.onNumberChange} />
-				<button> </button>
 				<div>{this.state.message}</div>
 			</form>
 

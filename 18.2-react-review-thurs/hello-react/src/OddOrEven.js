@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Counter from './Counter';
-
 
 class OddOrEven extends Component {
 
@@ -28,8 +26,6 @@ class OddOrEven extends Component {
 
 	onNumberChange(event) {
 		let newValue = parseInt(event.target.value, 10);
-		
-		let oddOrEven = this.oddOrEven(newValue);
 
 		this.setState({
 			oddOrEven: this.oddOrEven(newValue)

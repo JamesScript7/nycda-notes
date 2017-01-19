@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 //created a new component
@@ -27,7 +26,7 @@ class App extends Component {
         <Company name="Drumming Rabbit" sponsor="Energizer" />
         <Company name="Tony the Tiger" sponsor="Kellogs" />
 
-        <Counter min="0" max="10" />
+        <Counter min="0" start="5" max="10" />
         <Counter min="45" start="50" max="65" />
         
         <Flavors />

@@ -1,0 +1,7 @@
+* {
+	font-family: sans-serif;
+}
+
+#output #list div {
+	border: 1px solid gold;
+}
