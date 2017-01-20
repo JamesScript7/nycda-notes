@@ -15,7 +15,11 @@ import SayHello from './sayHello';
 
 import OddOrEven from './OddOrEven';
 
-import Guess from './Guess'
+import Guess from './Guess';
+
+//Parent&Child example
+import FileList from './FileList';
+import ListItem from './ListItem';
 
 class App extends Component {
   render() {
@@ -36,6 +40,12 @@ class App extends Component {
         <OddOrEven startValue="5" />
 
         <Guess />
+
+        <FileList>
+          <ListItem name="File 1" type="file" />
+          <ListItem name="File 2" type="file" />
+          <ListItem name="File 3" type="file" />
+        </FileList>
 
       </div>
     );

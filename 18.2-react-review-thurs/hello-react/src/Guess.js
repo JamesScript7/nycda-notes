@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+//import instead of <link>ing
+import './guess.css'
+
 class OddOrEven extends Component {
 
 	constructor(props) {
@@ -8,6 +11,7 @@ class OddOrEven extends Component {
 		this.answer = this.pickNumber();
 
 		this.state = {
+			gameStatus: "new",
 			message: "Guess the number!"
 		}
 
@@ -23,25 +27,32 @@ class OddOrEven extends Component {
 	onSubmit(event) {
 		event.preventDefault();
 
-		let msg
-		if (this.state.guess === this.answer) {
+		let msg, newStatus;
+
+		if (this.guess === this.answer) {
 			msg = "you got it! Try again!";
+			newStatus = "won";
 			this.answer = this.pickNumber();
-		} else if (this.state.guess > this.answer) {
+		} else if (this.guess > this.answer) {
+			newStatus = "wrong";
 			msg = "too high!";
-		} else if (this.state.guess < this.answer) {
+		} else if (this.guess < this.answer) {
+			newStatus = "wrong";
 			msg = "too low!";
 		} else {
+			newStatus = "wrong";
 			msg = "I didn't understand that...";
 		}
 
-		this.setState({message : msg})
+		this.setState({
+			message : msg,
+			gameStatus: newStatus
+		});
 	}
 
 	onNumberChange(event) {
-		let newGuess = parseInt(event.target.value, 10);
-
-		this.setState({guess: newGuess});
+		let textBox = event.target;
+		this.guess = parseInt(textBox.value, 10);
 	}
 
 	render() {
@@ -49,14 +60,14 @@ class OddOrEven extends Component {
 			
 			<form className="Guess" onSubmit={this.onSubmit}>
 				<input type="number" onChange={this.onNumberChange} />
-				<div>{this.state.message}</div>
+				<button>Enter</button>
+				<div className={`${this.state.gameStatus} message`}>
+					{this.state.message}
+				</div>
 			</form>
 
 			)
 	}
 }
-
-
-
 
 export default OddOrEven;

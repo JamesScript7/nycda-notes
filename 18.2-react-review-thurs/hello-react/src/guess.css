@@ -1,0 +1,13 @@
+.Guess .message {
+	font-weight: bold;
+}
+
+.Guess .new.message {
+	color: green;
+}
+.Guess .wrong.message {
+	color: red;
+}
+.Guess .won.message {
+	color: green;
+}

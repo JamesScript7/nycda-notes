@@ -1,0 +1,105 @@
+REACT REVIEW:
+
+"this" gets lost so thats why we need to bind it in REACT.
+
+let theComponent = this;
+
+theComponent.onNumberChange
+
+this refers to this of the constructor instead of the "event handler"
+
+		     "that"  "this" will not refer to "that"
+			    v-------|
+for example: onClick={this.onNumberChange}
+
+
+event.target is the element that is coming from.
+
+you can import css into your component!!! instead of having it <link> in your index.html
+
+css modules because you can import it like a module.
+
+
+reusable components!!!
+so put you Guess.js and Guess.css into one folder so you can share it and other people can use it.
+
+bootstrap react js
+
+Component hierarchy
+wrapper/nesting/parent&child
+
+simple versions of components:
+
+if you don't have state you can just make something like the Simple.js file
+
+import React, { Component } from 'react';
+
+const Simple = function(props) {
+	return (
+		<div className="Simple">
+			<p>Simple, huh</p>
+			<p>{props.extra}</p>
+		</div>
+		);
+}
+
+
+child components become an array in a parent component!
+
+<parent>
+	<child></child>
+	<child></child>
+	<child></child>
+</parent>
+
+Example:
+
+	render() {
+		var toRender = [];
+
+		this.data.forEach(function (file) {
+			let item = <ListItem name={file} />
+			toRender.push(item);
+		});
+
+		return (<ul> {toRender} </ul>);
+	}
+
+can become:
+
+export default class FileList extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (<ul> {this.props.children} </ul>);
+	}
+}
+
+button group!
+
+ls -p
+puts slashes on your directories
+
+lets have the child affect the parent
+
+
+The buttons are in ListItem and onDelete is in FileList
+
+you want to make deleteFile available to ListItem
+
+we use props to make them communicate to each other.
+
+
+
+
+
+
+
+
+
+
+
+
+
