@@ -20,13 +20,9 @@ class Tweet extends Component {
 
 		this.tweetArr.push(this.val);
 
-		for(var i=0;i<this.tweetArr.length;i++) {
-
-			this.setState({
-				tweets: this.tweetArr[i]
-			})
-		}
-
+		this.setState({
+			tweets: this.val
+		})
 	}
 
 	textChange(e) {
