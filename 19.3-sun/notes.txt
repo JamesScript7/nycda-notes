@@ -1,0 +1,175 @@
+Finishing Basic REACT
+
+We are covering AJAX with REACT
+
+fetch is a replacement for $.AJAX.
+(it's suppose to be built into the browser minus safari)
+also suppose to replace jQuery.
+
+
+polyfill
+JS that fills in gaps between browsers
+
+if (!window.fetch) {window.fetch = myFetch}
+
+when fetch doesn't work:
+-S = --save
+
+window.fetch polyfill
+
+npm i whatwg-fetch -S
+
+put this on top of your REACT app
+import 'whatwg-fetch';
+
+whatwg.org
+
+you can "download" fetch if your browser doesn't support it.
+
+polyfill fill the form
+
+$.GET
+$.POST
+
+behind the scenes:
+xml http request
+
+we will learn fetch instead of axios
+
+PROPS: Defined externally to component,
+	   Cannot change inside component
+
+STATE: 
+
+
+state of the parent container can change the prop of the child container.
+
+
+next() {
+	this.nameIndex = (this.nameIndex + 1) % this.names.length;
+}
+
+compared to:
+
+next() {
+		if (this.state.value < (this.flavors.name.length - 1)) {
+			let newValue = this.state.value + 1;
+			this.setState({value: newValue});
+		} else {
+			this.setState({value: 0 });
+		}
+	}
+
+
+count++;
+it's avoided by Daniel
+
+you'll see a replacement for redux!! in 6 months time.
+
+diff components with state communicating with each other.
+
+(redux is new and not good at it?)
+
+
+function Hello(props) {
+	return (
+		<div>
+			Hello, {props.name}!
+		</div>
+	)
+}
+
+
+since you can't change props.name for example..
+
+you can add this on the bottom of the page:
+
+	Hello.defaultProps = {name: "World"};
+	Counter.defaultProps = {min: 1, max: 100};
+
+^-- this should be the documentation for your code. It's self documenting!
+
+Start with App.js and then render of whatever component when looking at new code.
+
+**create an email app.
+
+Getting into AJAX.
+
+HTTP Requests in REACTJS
+
+You can put the binding right in the render view... but it clutters the view.. so we put them in the constructor.
+
+
+Axios example:
+
+compenentDidMount() {
+	axios.get('http>//...')
+	.then((res) => {
+		console.lof(res.data);
+	})
+}
+
+Using fetch:
+
+componentDidMount() {
+	fetch("/names.json").then(function(response) {
+		response.text().then(text => {
+			const data = JSON.parse(text);
+			this.names = data.names;
+	}).catch(error => {
+		console.error("Could not load names.json");
+		this.setState({error:"oops something went wrong"});
+		this.names = [];
+	}
+
+
+
+you only want the state to communicate.. and everything else jus work in the background.. hidden.
+
+this.state = {
+	value: parseInt(props.start, 10) || 0,
+	error: "something",
+	name: "something"
+}
+
+**REACT router (advanced react)
+
+
+modernizr.com (worth reading!)
+
+REACT only cares about state
+
+
+WORKSHOP:
+create a tweet app that updates immediately in reverse chronological order
+
+use react deep dive components to help
+
+official react docs for react components for review
+
+
+thinking-in-react.html
+
+
+Daniel typed this in:
+
+<ul>{
+	this.tweets.map(tweet =>
+		<li>{tweet}</li>
+	)
+}</ul>
+
+abc = always be coding
+
+
+
+
+
+
+
+
+
+
+
+
+

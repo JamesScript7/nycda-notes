@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hello from './Hello';
 
 class Flavors extends Component {
 
@@ -26,27 +27,27 @@ class Flavors extends Component {
 			return this.setState({ value: this.flavors.name.length - 1});
 		}
 		let newValue = this.state.value - 1;
+		console.log(newValue);
 		this.setState({value: newValue});
 	}
 
 	next() {
-		if (this.state.value < (this.flavors.name.length - 1)) {
-			let newValue = this.state.value + 1;
-			this.setState({value: newValue});
-		} else {
-			this.setState({value: 0 });
-		}
+		let newValue = (this.state.value + 1) % this.flavors.name.length;
+		console.log(newValue);
+		this.setState({value: newValue});
 	}
 
 	render() {
 		return(
-			<div>
+			<div className="Flavors">
 				<h1>
 					Check out some flavors!
 				</h1>
 
-				<div>Flavors:</div>
-				<h3> {this.flavors.name[this.state.value]} </h3>
+				<h3>From Hello:</h3>
+				<Hello name={this.flavors.name[this.state.value]} />
+
+				<h3 className="from-flavor"> From Flavors: {this.flavors.name[this.state.value]} </h3>
 				<button onClick={this.prev}>prev</button>
 				<button onClick={this.next}>next</button>
 

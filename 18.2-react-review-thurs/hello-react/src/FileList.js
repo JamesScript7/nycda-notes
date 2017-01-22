@@ -44,9 +44,15 @@ export default class FileList extends Component {
 				);
 		});
 
-		return (<ul>
-					{directoriesToRender}
-					{this.props.children}
-				</ul>);
+		return (
+				<div className="FileList">
+					<h1>
+						File Lists
+					</h1>
+					<ul>
+						{directoriesToRender}
+						{this.props.children}
+					</ul>
+				</div>)
 	}
 }

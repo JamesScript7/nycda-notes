@@ -21,6 +21,12 @@ import Guess from './Guess';
 import FileList from './FileList';
 import ListItem from './ListItem';
 
+//Cycling through a list (connected to flavor)
+import Hello from './Hello';
+
+//Sunday Workshop
+import Tweet from './Tweet';
+
 class App extends Component {
   render() {
     return (
@@ -46,6 +52,10 @@ class App extends Component {
           <ListItem name="File 2" type="file" />
           <ListItem name="File 3" type="file" />
         </FileList>
+
+        <Hello />
+
+        <Tweet startValue="Enter a Tweet!" />
 
       </div>
     );
