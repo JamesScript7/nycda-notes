@@ -1,0 +1,85 @@
+Guest Speaker: Pranesha Bunsee
+
+Some insight with back end and front end:
+
+D3 JS:
+data visualization: animation library
+
+import logistics:
+
+Proprietary: ORACLE
+Open source: Ruby.. etc.
+
+Process Flow Diagram
+
+request for quotes --> collect response --> rates available
+
+automatic reminders based on time
+
+internal web app:
+1. list to vendors, ports, over seas supplier locations
+
+2. web interface to capture quotes, (There's value to them seeing their own quotes)
+
+
+Gellert global group's system:
+
+On-premise							AWS
+							|
+Master lists 	------------o
+	supplier locations 		|	
+	ports					|		
+	zip codes			  	|	 	
+	vendors				    o----- Logistics Vendor Portal
+ 							|	   	Add rates
+JIRA(REST API)	------------o     	Add comments
+	internal RFQ       		|	
+	External RFQ		    |      	Do rates analysis
+  							|		
+Costing app   	------------o      	Report on all rates from
+	Run Costing scenarios	      	origin to destination
+	Warehouses							
+
+MVC architecture?
+DB: select insert delete create
+
+check out: node school
+
+weworkremotely
+
+service plus?
+apps to talk to each other
+
+removing recapture
+
+inventory management
+numbercruncher all orders API
+
+.map example:
+
+let statusUpdates = [
+	"first",
+	"second",
+	"third"
+]
+
+statusUpdates.map((item, index) =>
+	<li key={index}>{item}</li>
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

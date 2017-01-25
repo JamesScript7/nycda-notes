@@ -6,10 +6,10 @@ class Tweet extends Component {
 
 		this.state = {
 			value: props.startValue,
-			tweets: "Empty here..."
+			id: 0,
+			tweets: "Empty here...",
+			tweetsArr: []
 		}
-
-		this.tweetArr = [];
 
 		this.textChange = this.textChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
@@ -18,34 +18,46 @@ class Tweet extends Component {
 	onSubmit(e) {
 		e.preventDefault();
 
-		this.tweetArr.push(this.val);
+		console.log(this.state.tweetsArr.push(e.target.tweet.value));
+		console.log(this.state.tweetsArr);
+		console.log(e.target.tweet.value);
+
+		console.log("BEFORE===>",this.state);
 
 		this.setState({
-			tweets: this.val
-		})
+			tweetsArr: this.state.tweetsArr.push(e.target.tweet.value)
+		});
+
+		console.log("AFTER===>",this.state);
+
+
+		
 	}
 
 	textChange(e) {
-		this.val = e.target.value;
+		console.log(e.target.value);
 	}
 
 	render() {
+		console.log(this.state)
 		return (
 				<form onSubmit={this.onSubmit}>
 
 					<h1>TWEET IT</h1>
 
-					<input type="text"
-						   placeholder={this.props.startValue}
-						   onChange={this.textChange} />
+					<input 
+						name="tweet"
+						type="text"
+						placeholder={this.props.startValue}
+						onChange={this.textChange} />
 
-					<button>Tweet it!</button>
+					<button>SEND</button>
 
 					<ul>
 						{
-							this.tweetArr.map(tweet => {
-								return <li>{tweet}</li>
-							}).reverse()
+							this.state.tweetsArr.map((tweet,index) => {
+								return <li key={index}>{tweet}</li>
+							})
 						}
 					</ul>
 
