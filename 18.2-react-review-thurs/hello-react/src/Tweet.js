@@ -4,42 +4,32 @@ class Tweet extends Component {
 	constructor(props) {
 		super(props);
 
+		this.tweets = [];
+		
 		this.state = {
 			value: props.startValue,
-			id: 0,
-			tweets: "Empty here...",
-			tweetsArr: []
+			tweets: this.tweets
 		}
 
-		this.textChange = this.textChange.bind(this);
+
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
 	onSubmit(e) {
 		e.preventDefault();
 
-		console.log(this.state.tweetsArr.push(e.target.tweet.value));
-		console.log(this.state.tweetsArr);
-		console.log(e.target.tweet.value);
+		console.log("BEFORE===>", this.state);
 
-		console.log("BEFORE===>",this.state);
+		this.tweets.push(e.target.tweet.value);
 
 		this.setState({
-			tweetsArr: this.state.tweetsArr.push(e.target.tweet.value)
+			tweets: this.tweets
 		});
 
-		console.log("AFTER===>",this.state);
-
-
-		
-	}
-
-	textChange(e) {
-		console.log(e.target.value);
+		console.log("AFTER===>",this.state);		
 	}
 
 	render() {
-		console.log(this.state)
 		return (
 				<form onSubmit={this.onSubmit}>
 
@@ -48,16 +38,15 @@ class Tweet extends Component {
 					<input 
 						name="tweet"
 						type="text"
-						placeholder={this.props.startValue}
-						onChange={this.textChange} />
+						placeholder={this.props.startValue} />
 
 					<button>SEND</button>
 
 					<ul>
 						{
-							this.state.tweetsArr.map((tweet,index) => {
+							this.state.tweets.map((tweet,index) => {
 								return <li key={index}>{tweet}</li>
-							})
+							}).reverse()
 						}
 					</ul>
 
