@@ -1,0 +1,115 @@
+REACT:
+
+You can have prop types.
+You can set constraints on the props.
+
+onSubmit(e) {
+	e.preventDefault();
+
+	this.tweets.push(e.target.tweet.value);
+
+	this.setState({
+		tweets: this.tweets
+	});
+
+	//if you want to save it to the database...
+	$.post("/the-server", {tweets: this.tweets})
+}
+
+you can't change the state directly
+
+you can also create a variable and push the data into that and then setState.
+
+
+
+REACT will strip away whitespace so if you want to add a space then type (code for space) {" "} or (html for space) &nbsp;
+
+"It's there for historical reasons"
+
+
+presentational components
+logical components
+
+
+[1,2,3].forEach(function(num) {
+	console.log(num * num);
+})
+
+The difference between the two:
+
+[1,2,3].map(function(num) {
+  return num * num;
+});
+
+[1,2,3].map(num => num * num);
+
+
+let a = [1,2,3];
+
+let b = [...a, 4];
+
+// result: [1,2,3, 4];
+
+It's concats
+
+... = the spread operator
+
+let newStatusUpdates = 
+[...this.state.statusUpdates, this.enteredText];
+
+or to reverse it:
+
+[this.enteredText, ...this.state.statusUpdates];
+
+
+shift, unshift, pop, push
+
+
+LIFO function stack
+
+git stash
+will take your gits and push them into a stash
+
+
+Stack overflow when you keep calling functions and you run out of room.
+
+function overflow() {
+	overflow();
+}
+
+overflow();
+
+erlang doesn't have loops.. "only head and tails"
+
+you can set the parent function as a prop so the child can have access to it.
+
+list has to be in parent state
+
+form has just the form element and has an onSubmit event.
+
+pushing state up in the REACT docs.
+
+one way to get data to travel is through their props.
+
+Lifting state up.
+
+Router demo
+
+you can swap out component on the fly
+
+localhost:3000/#/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

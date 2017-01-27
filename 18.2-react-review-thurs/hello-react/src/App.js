@@ -27,6 +27,8 @@ import Hello from './Hello';
 //Sunday Workshop
 import Tweet from './Tweet';
 
+import Parent from './Parent';
+
 class App extends Component {
   render() {
     return (
@@ -56,6 +58,8 @@ class App extends Component {
         <Hello />
 
         <Tweet startValue="Enter a Tweet!" />
+
+        <Parent />
 
       </div>
     );

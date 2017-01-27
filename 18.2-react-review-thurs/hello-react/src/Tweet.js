@@ -1,56 +1,45 @@
 import React, { Component } from 'react';
+import TweetForm from './TweetForm';
 
 class Tweet extends Component {
 	constructor(props) {
 		super(props);
 
 		this.tweets = [];
-		
+
 		this.state = {
 			value: props.startValue,
-			tweets: this.tweets
+			tweets: this.tweets,
+			test: []
 		}
 
-
-		this.onSubmit = this.onSubmit.bind(this);
+		this.addNewStatus = this.addNewStatus.bind(this);
 	}
 
-	onSubmit(e) {
-		e.preventDefault();
+	addNewStatus(newStatus) {
 
-		console.log("BEFORE===>", this.state);
-
-		this.tweets.push(e.target.tweet.value);
+		this.tweets.push(newStatus);
 
 		this.setState({
 			tweets: this.tweets
 		});
 
-		console.log("AFTER===>",this.state);		
 	}
 
 	render() {
 		return (
-				<form onSubmit={this.onSubmit}>
+			<div className="Tweet">
 
-					<h1>TWEET IT</h1>
+				<TweetForm addNewStatus={this.addNewStatus}/>
 
-					<input 
-						name="tweet"
-						type="text"
-						placeholder={this.props.startValue} />
-
-					<button>SEND</button>
-
-					<ul>
-						{
-							this.state.tweets.map((tweet,index) => {
-								return <li key={index}>{tweet}</li>
-							}).reverse()
-						}
-					</ul>
-
-				</form>
+				<ul>
+					{
+						this.state.tweets.map((tweet,index) => {
+							return <li key={"item-" + (index + 1)}>{tweet}</li>
+						}).reverse()
+					}
+				</ul>
+			</div>
 			);
 	}
 }
