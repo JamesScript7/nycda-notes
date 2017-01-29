@@ -2,64 +2,42 @@ import React, { Component } from 'react';
 import './App.css';
 
 //created a new component
-import Company from './Company';
+// import Company from './Company';
 
-//created a second component
-import Counter from './Counter';
+// //created a second component
+// import Counter from './Counter';
 
-//cycle through an array
-import Flavors from './Flavors';
+// //cycle through an array
+// import Flavors from './Flavors';
 
-//say hello!
-import SayHello from './sayHello';
+// //say hello!
+// import SayHello from './sayHello';
 
-import OddOrEven from './OddOrEven';
+// import OddOrEven from './OddOrEven';
 
-import Guess from './Guess';
+// import Guess from './Guess';
 
-//Parent&Child example
-import FileList from './FileList';
-import ListItem from './ListItem';
+// //Parent&Child example
+// import FileList from './FileList';
+// import ListItem from './ListItem';
 
-//Cycling through a list (connected to flavor)
-import Hello from './Hello';
+// //Cycling through a list (connected to flavor)
+// import Hello from './Hello';
 
-//Sunday Workshop
-import Tweet from './Tweet';
+// //Sunday Workshop
+// import Tweet from './Tweet';
+// import Parent from './Parent';
 
-import Parent from './Parent';
+import Nav from './Nav'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
 
-        <Company name="Polar Bear" sponsor="Coca-Cola" />
-        <Company name="Drumming Rabbit" sponsor="Energizer" />
-        <Company name="Tony the Tiger" sponsor="Kellogs" />
+        <Nav />
 
-        <Counter min="0" start="5" max="10" />
-        <Counter min="45" start="50" max="65" />
-        
-        <Flavors />
-
-        <SayHello name="Class" />
-
-        <OddOrEven startValue="5" />
-
-        <Guess />
-
-        <FileList>
-          <ListItem name="File 1" type="file" />
-          <ListItem name="File 2" type="file" />
-          <ListItem name="File 3" type="file" />
-        </FileList>
-
-        <Hello />
-
-        <Tweet startValue="Enter a Tweet!" />
-
-        <Parent />
+        {this.props.children}
 
       </div>
     );

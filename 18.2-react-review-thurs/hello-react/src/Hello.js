@@ -3,7 +3,7 @@ import React from 'react';
 function Hello(props) {
 	return (
 		<div className="Hello">
-			{props.name}
+			You are in: {props.params.name}
 		</div>
 		);
 }

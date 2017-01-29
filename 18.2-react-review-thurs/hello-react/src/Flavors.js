@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Hello from './Hello';
+// import Hello from './Hello';
 
 class Flavors extends Component {
 
@@ -43,9 +43,11 @@ class Flavors extends Component {
 				<h1>
 					Check out some flavors!
 				</h1>
-
+				
+				{/*
 				<h3>From Hello:</h3>
 				<Hello name={this.flavors.name[this.state.value]} />
+				*/}
 
 				<h3 className="from-flavor"> From Flavors: {this.flavors.name[this.state.value]} </h3>
 				<button onClick={this.prev}>prev</button>

@@ -30,7 +30,7 @@ class SayHello extends Component {
 		return (
 			<form className="SayHello">
 
-				<h1>Hi, {this.state.name}!</h1>
+				<h1>Hello, {this.state.name}!</h1>
 
 				<div>
 					<input type="text"
@@ -44,6 +44,8 @@ class SayHello extends Component {
 			);
 	}
 }
+
+SayHello.defaultProps = { name: "World" };
 
 
 export default SayHello;

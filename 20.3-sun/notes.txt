@@ -1,0 +1,154 @@
+REACT router
+
+npm install --save react-router
+
+react-router replaces <frames>
+
+<Router history={hashHistory}>
+
+	<Route path="/" component={App} />
+	<Route path="/repos" component={Repos} />
+	<Route path="/about" component={About} />
+
+</Router>
+
+you only get a component, no post.
+
+import { Link } from 'react-router';
+
+<li><Link to="/about">About</Link></li>
+<li><Link to="/about">Repos</Link></li>
+<li><Link to="/about">About</Link></li>
+
+Route with params
+
+//Route
+
+<Route path="/emails/:userName"
+	component={Inbox} />
+
+//Navigation
+
+let usernameLink = `/emails/{this.state.username}`;
+
+<Link to={`/emails/{usernameLink}`>Foo Inbox </Link>;
+
+{/*
+	to comment something out
+*/}
+
+
+
+params are part of the URL and then become props
+
+REDUX
+Third party app
+
+we have lots of different components and lot of different states and it's difficult to get them passed around
+
+YAGNI (You ain't gunna need it)
+
+props can only be passed outside in. not inside out.
+
+REACT is all about user interface.
+
+TDD - test driven development
+RDD - resume driven development
+
+REDUX has global state so the app only cares about that and not the other local ones?
+
+you can make a video game with REDUX!
+
+It's a state container. It's about state management.
+
+Whole state of the app is in the single store!
+
+redux will emit an action.
+
+for example:
+
+action: new message comes in.
+reducer function: will update the state
+(*doesn't really...)
+
+State in REACT is declaritive.
+
+      |-- (will be passed in as an arguement)
+      V
+Current State -->  Reducer Function --> New State
+Action        -->
+
+(functional programming)
+
+let toggleAction = {
+	type: "TOGGLE"
+};
+
+*all the email data should be in the action
+
+
+	const defaultState = { checked: false };
+
+	const reducer =
+	function(state = defaultState, action) {
+		switch (action.type) {
+			case 'TOGGLE':
+				return {
+					...state,
+					checked: !state.checked
+				};
+		}
+		return state;
+	};
+
+	const store = createStore(reducer);
+
+
+in a switch case: if you arn't returning then use break;
+
+const a = {
+  counter: 12,
+  numClick: 42
+}
+
+const b = {
+  ...a,  <--------------------------|
+  numClick: a.numClick+1			|
+}									|
+									|
+console.log(b);						|
+									|
+
+you make a copy and set the state from that.
+
+redux will swap a with b
+
+actions are events.. reducers are event handlers.
+
+*By changing the state directly the state is unpredictable.
+
+this is so that the other components can't screws up the state for the other components...
+
+The error will be in the reducer or components that are connected with the reducer.
+
+echo '{}' > package.json
+
+don't console.log() inside a reducer
+no global variables inside your reducer
+
+
+single source of truth!
+store.getState... thats the basis of the entire app
+
+Art of this is knowing which actions will trigger
+(THINK CRUD) (DELETE or requesting a change on the DB)
+
+
+
+
+
+
+
+
+
+
