@@ -1,0 +1,131 @@
+REDUX WORKSHOP
+
+single state for all components
+
+you send an action(kind of like an event)
+
+reducer takes current state and an action and give back a new state.
+
+EXAMPLE:
+
+let jump = { type: "JUMP"}
+
+store.dispatch(jump);
+
+store.subscribe(function() {
+	let state = store.getState();
+
+	if (state.isJumping) {
+		//graphical thing
+	}
+})
+
+make a copy of the state
+you don't touch the original state
+
+let newState = {...state};
+
+if(action.type === 'TOGGLE') {
+	newState.checked = !state.checked	
+}
+
+It's better to have TOGGLE as a variable instead of a string...
+
+BECAUSE:
+With a string it'll return the original state...
+
+whereas... a variable will return an error saying that the variable is undefined.
+
+
+
+you don't want the action to default to null.. you want it to return the current state.
+
+const start = false;
+
+		        (state = start, action)
+function reducer(state, action) {
+	var checked = state || start;
+
+	switch (action.type) {
+		case 'TOGGLE':
+			return !checked;
+	}
+
+	return state;
+}
+
+store.dispatch({type: "TOGLE"});
+store.dispatch({type: TOGGLE});
+
+
+reducers are very easy to test!
+let startState = { checked: true };
+let endState = { checked: false };
+
+expect( myReducer(startState, { type: TOGGLE })).
+		toEqual(endState)
+
+assertEqual(
+	myReducer({ checked: false }, { type: TOGGLE }),
+	{ checked: true }
+)
+
+assertEqual(
+	myReducer({ checked: true }, { type: TOGGLE }),
+	{ checked: false}
+)
+
+store.dispatch({
+	type: "ADD_WORD",
+	word: "reduxrocks"
+});
+
+
+ADD_WORD action
+
+
+undefined || "something else"
+
+=> "something else"
+
+false || "something else"
+
+=> "something else"
+
+
+
+let letter = word[i];
+
+counter[letter] = counter[letter] || 0;
+counter[letter] += 1;
+
+if (counter[letter]) {
+	counter[letter] += 1;
+} else {
+	counter[letter] = 1;
+}
+
+
+reducer gives you a stateful count
+
+you can put data in the action
+
+*** homepage reducer ***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
