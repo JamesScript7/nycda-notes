@@ -3,6 +3,7 @@ console.log(now);
 
 var t = now.getTime();
 // console.log(t);
+// note: gives back current time in milliseconds
 
 var seconds = t + 1234 * 1000;
 // console.log(seconds);
@@ -15,6 +16,8 @@ var hours = t + 1234 * 60 * 60 * 1000;
 
 var convertSec = new Date(seconds);
 console.log("1,234 seconds from now:\n" + convertSec);
+// note: You're adding the milliseconds on top of the
+// current time.
 
 var convertMin = new Date(minutes);
 console.log("1,234 mintues from now:\n" + convertMin);

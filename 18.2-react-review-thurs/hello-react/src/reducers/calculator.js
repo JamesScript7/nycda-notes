@@ -2,11 +2,11 @@
 
 let createStore = require('redux').createStore
 
-let add = "ADD";
-let subtract = "SUBTRACT";
-let multiply = "MULTIPLY";
-let divide = "DIVIDE";
-let clear = "CLEAR"
+let ADD = "ADD";
+let SUBTRACT = "SUBTRACT";
+let MULTIPLY = "MULTIPLY";
+let DIVIDE = "DIVIDE";
+let CLEAR = "CLEAR"
 
 function calculator(state, action) {
 	const currentState = state || 0;
@@ -14,32 +14,20 @@ function calculator(state, action) {
 	
 	let number = action.number
 
-	// if (action.type === add) {
-	// 	newState = valOne + valTwo;
-	// } else if (action.type === subtract) {
-	// 	newState = valOne - valTwo;
-	// } else if (action.type === divide) {
-	// 	newState = valOne / valTwo;
-	// } else if (action.type === multiply) {
-	// 	newState = valOne * valTwo;
-	// } else {
-	// 	return newState
-	// }
-
 	switch (action.type) {
-	case add:
+	case ADD:
 		newState += number;
 		break;
-	case subtract:
+	case SUBTRACT:
 		newState -= number;
 		break;
-	case divide:
+	case DIVIDE:
 		newState /= number;
 		break;
-	case multiply:
+	case MULTIPLY:
 		newState *= number;
 		break;
-	case clear:
+	case CLEAR:
 		newState = 0;
 	default:
 		return newState;
@@ -59,12 +47,12 @@ store.subscribe(() => {
 
 console.log("dispatching action:");
 
-store.dispatch( {type: add, number: 100} );
-store.dispatch( {type: subtract, number: 50} );
-store.dispatch( {type: multiply, number: 2} );
-store.dispatch( {type: divide, number: 2} );
-store.dispatch( {type: clear} );
-store.dispatch( {type: add, number: 42} );
+store.dispatch( {type: ADD, number: 100} );
+store.dispatch( {type: SUBTRACT, number: 50} );
+store.dispatch( {type: MULTIPLY, number: 2} );
+store.dispatch( {type: DIVIDE, number: 2} );
+store.dispatch( {type: CLEAR} );
+store.dispatch( {type: ADD, number: 42} );
 
 
 

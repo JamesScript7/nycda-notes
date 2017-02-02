@@ -30,7 +30,7 @@ State <-----> State
   ^--> Redux <--^
 
 
-ternary expression:
+ternary expressions
 
 
 

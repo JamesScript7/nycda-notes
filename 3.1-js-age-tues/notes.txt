@@ -99,10 +99,6 @@ for loops = most common loop.
 when you want to increment by 2.
 i+=2
 
-assignment:
-
-
-
 
 
 

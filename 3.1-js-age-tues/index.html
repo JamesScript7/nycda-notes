@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>
-		JavaScript!
+		Some JavaScript fun!
 	</title>
-	<link rel="stylesheet" type="text/css" href="JS.js">
-	<script type="text/javascript">
 
-//if age is under 21, it'll short circuit.
+	<script src="./JS.js"></script>
+	<script type="text/javascript">
+		//if age is under 21, it'll short circuit.
 
 		if (age >= 21) {
 			canEnter = true;
@@ -16,10 +16,15 @@
 			}
 		}
 
-//
+		console.log("Age over 21? " + canEnter);
 
+		console.log(isMember ? "You are a Member" : "You are not a Member");
+
+		console.log("Entrance Fee:");
+		console.log(isFree ? "FREE" : "$10.00");
 	</script>
 </head>
+
 <body>
 	<h1>
 		Hello World!

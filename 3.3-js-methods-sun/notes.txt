@@ -77,10 +77,7 @@ function callThreeTimes(f) {
 run this function everytime this button is clicked
 
 
-
-
 anonymous function.. it only uses it once, its not saved
-
 
 
 hashes/dictionaries
@@ -136,8 +133,11 @@ var movies = [
 movies[0]["title"];
 
 
+Usually naming a function goes like this:
 
-
+verb(noun) {
+ 	return noun
+}
 
 
 
