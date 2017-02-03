@@ -1,15 +1,17 @@
 "use strict";
 
-let createStore = require('redux').createStore
+let createStore = require('redux').createStore;
 
-let ADD = "ADD";
-let SUBTRACT = "SUBTRACT";
-let MULTIPLY = "MULTIPLY";
-let DIVIDE = "DIVIDE";
-let CLEAR = "CLEAR"
+let
+	ADD = "ADD",
+	SUBTRACT = "SUBTRACT",
+	MULTIPLY = "MULTIPLY",
+	DIVIDE = "DIVIDE",
+	CLEAR = "CLEAR",
+	defaultState = 0;
 
 function calculator(state, action) {
-	const currentState = state || 0;
+	const currentState = state || defaultState;
 	let newState = currentState;
 	
 	let number = action.number
@@ -36,7 +38,6 @@ function calculator(state, action) {
 	return newState
 }
 
-
 let store = createStore(calculator);
 
 store.subscribe(() => {
@@ -44,16 +45,10 @@ store.subscribe(() => {
 })
 
 
-
 console.log("dispatching action:");
-
 store.dispatch( {type: ADD, number: 100} );
 store.dispatch( {type: SUBTRACT, number: 50} );
 store.dispatch( {type: MULTIPLY, number: 2} );
 store.dispatch( {type: DIVIDE, number: 2} );
 store.dispatch( {type: CLEAR} );
 store.dispatch( {type: ADD, number: 42} );
-
-
-
-

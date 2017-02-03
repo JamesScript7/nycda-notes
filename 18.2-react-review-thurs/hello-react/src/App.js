@@ -28,7 +28,7 @@ import './App.css';
 // import Tweet from './Tweet';
 // import Parent from './Parent';
 
-import Nav from './Nav'
+import Nav from './Nav';
 
 class App extends Component {
   render() {

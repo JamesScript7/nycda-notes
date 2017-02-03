@@ -2,7 +2,7 @@
 
 let createStore = require('redux').createStore
 
-// import {createStore } from 'redux'
+// import {createStore } from 'redux';
 
 function counter (state, action) {
 	let currentState = state || 0;

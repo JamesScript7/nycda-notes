@@ -1,0 +1,179 @@
+Connecting redux with REACT
+
+You add jQuery inside:
+
+store.subcribe(function() {
+	var newState = store.getState();
+	$(".class").text( newState );
+})
+
+$(".class").click(function(event) {
+	event.preventDefault();
+	store.dispatch({ type: "INCREMENT" });
+})
+
+Sometimes you gotta give arguments a default value:
+
+=== was made to fix ==
+
+0 is equivalent to false
+0 == false
+=> true
+
+0 === false
+=> false
+
+
+false == undefined
+=> false
+
+!false == !undefined
+=> true
+
+global variables will get hard to maintain in a larger project
+
+redux should never be used to call AJAX;
+
+$.get("/search", searchText, function(results) {
+	redux.dispatch({
+		type: "SEARCH_RESULTS",
+		results: results
+	});
+});
+
+store.subscribe(function() {
+	var newState = store.getState();
+
+	$(".search-results").html(
+		render(newState.searchResults)
+	);
+});
+
+
+FLUX & REDUX
+
+Flux is an architecture to build complex React Apps
+
+Redux is an alternative to Flux
+
+
+Event ->  Action(dispatch) -> Reducer
+        												|
+        												|
+     Subscribe <-	New State	 <--~
+   		   |
+   			 |
+   			 V
+   		setState
+   			 |
+   		   |
+   		   V
+   	  UI Change (render)
+
+
+   	 															(back to View)
+  v-----				  <-----  	   			 <------~ 
+View -> Action -> Reducer -> Store -> State |
+	
+NONSCALABLE VERSION:
+
+const defaultState = {value: 0};
+
+var reducer function(state = defaultState, action) {
+	switch (action.type) {
+		case 'INCREMENT':
+			return { value : }
+	}
+	return state
+};
+
+var store = createStore(reducer);
+
+increment() {
+	store.dispatch({ type: "INCREMENT" });
+}
+
+decrement() {
+	store.dispatch({ type: "DECREMENT" });
+}
+
+// this is global:
+
+componentDidMount() {
+	store.subscribe(() => {
+		this.setState( store.getState() )
+	})
+}
+
+// when redux state changes we are updating component state.
+
+render() {
+	return (
+		<form className="Counter">
+			<button className="decrement"
+							onClick={this.decrement}
+			> &mdash; </button>
+
+			<span className="value">{this.state.value}</span>
+		
+			<button className="increment"
+							onClick={this.increment}
+			> + </button>
+		</form>
+	)
+}
+
+
+***
+jQuery you change the DOM directly
+REACT/REDUX you don't change the DOM directly
+
+REACT:
+setState triggers render
+
+REDUX:
+Action triggers reducer
+reducer triggers subscribe
+subscribe triggers render
+
+
+When you click submit it delivers a payload of multiple actions
+
+20 components are all subscribed to REDUX and you have 10 actions a second
+
+thats 200 renders a second!!! (this is a problem)
+
+
+What we covered:
+1. The principle of connecting react to redux
+
+Going to cover
+2. Advanced redux
+
+
+http://danieltsadok.net/redux-jquery/
+
+getting the store into redux.. as a prop
+
+Send:
+
+action
+type: "ADD"
+text: 
+
+going to reducer:
+[text]
+
+subscribe gets sent
+component listens to state changes
+
+move routes into react.. components..
+
+
+
+
+
+
+
+
+
