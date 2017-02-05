@@ -1,7 +1,7 @@
 import React from 'react';
+import './index.css';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
 
 //Added
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
@@ -33,9 +33,17 @@ import Hello from './Hello';
 import Tweet from './Tweet';
 import Parent from './Parent';
 
+//REDUX EXAMPLE
+import Status from './components/Status';
+import { createStore } from 'redux';
+
+import reducer from './reducers/updates';
+
+const store = createStore(reducer);
+
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={hashHistory} store={store}>
 
 	<Route path="/" component={App}>
 		<IndexRoute component={Company} />
@@ -50,6 +58,8 @@ ReactDOM.render(
 		<Route path="/ListItem" component={ListItem} />
 		<Route path="/Tweet" component={Tweet} />
 		<Route path="/Parent" component={Parent} />
+
+		<Route path="/Status" component={Status} />
 	</Route>
 
   </Router>,

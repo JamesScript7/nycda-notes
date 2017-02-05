@@ -1,0 +1,85 @@
+REACT review
+
+A reducer that does something to a number
+
+function g(number, action) {
+	return number + 2;
+}
+
+A reducer you want lots of actions that components can subcribe to.
+
+calc(50, { type: CLEAR })
+
+
+Twitter example:
+
+To make it redux friendly:
+	actions = will transform state into new state
+	reducer = 
+	state = array of strings
+
+actions
+ADD_STATUS
+REMOVE_STATUS
+
+ADD_STATUS "HI"
+
+props go from the outside in.
+
+you can't change the props once they are inside the component.
+
+parent components will subscribe to state changes
+
+child will dispatch to REDUX
+
+and the parent listening and is subscribed to REDUX
+
+action creators
+very simple functions that return actions.
+
+const actions = {
+	addStatus: function(statusText)
+}
+
+//actions:
+function createAddStatusAction(statusText) {
+	return {
+		type: "ADD_STATUS",
+		newStatus: statusText
+	}
+}
+
+createAddStatusAction("Hi!");
+
+
+
+function createAddAction(value) {
+	return {
+		type: "ADD",
+		number: value
+	}
+}
+
+store.dispatch(
+	createAddAction(3)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

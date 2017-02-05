@@ -1,7 +1,6 @@
 "use strict";
 
 let createStore = require('redux').createStore
-
 // import {createStore } from 'redux';
 
 function counter (state, action) {

@@ -18,6 +18,7 @@ export default function() {
           <li><Link to="/ListItem">ListItem</Link></li>
           <li><Link to="/Tweet">Tweet</Link></li>
           <li><Link to="/Parent">Parent</Link></li>
+          <li><Link to="/Status">Status</Link></li>
         </ul>
 	)
 }

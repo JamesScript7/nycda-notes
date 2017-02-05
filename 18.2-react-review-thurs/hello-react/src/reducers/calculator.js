@@ -17,22 +17,22 @@ function calculator(state, action) {
 	let number = action.number
 
 	switch (action.type) {
-	case ADD:
-		newState += number;
-		break;
-	case SUBTRACT:
-		newState -= number;
-		break;
-	case DIVIDE:
-		newState /= number;
-		break;
-	case MULTIPLY:
-		newState *= number;
-		break;
-	case CLEAR:
-		newState = 0;
-	default:
-		return newState;
+		case ADD:
+			newState += number;
+			break;
+		case SUBTRACT:
+			newState -= number;
+			break;
+		case DIVIDE:
+			newState /= number;
+			break;
+		case MULTIPLY:
+			newState *= number;
+			break;
+		case CLEAR:
+			newState = 0;
+		default:
+			return newState;
 	}
 
 	return newState
