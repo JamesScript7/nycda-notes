@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default function() {
 	return(
-		<ul role="nav">
+	  <ul role="nav">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/Hello/Child">Child</Link></li>
           <li><Link to="/Hello/Test">Test</Link></li>
@@ -19,6 +19,6 @@ export default function() {
           <li><Link to="/Tweet">Tweet</Link></li>
           <li><Link to="/Parent">Parent</Link></li>
           <li><Link to="/Status">Status</Link></li>
-        </ul>
+       </ul>
 	)
 }

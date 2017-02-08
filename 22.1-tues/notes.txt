@@ -1,0 +1,198 @@
+Tyler McGuiness - for REACT review
+
+subscribe -> REACT COMPONENT -> dispatch
+
+what best practices (architect) are used?
+
+JEST - Testing REACT
+
+container components - 
+
+presentational components - has no state or has no events. It has no "this"
+
+redux-redux
+JWT
+ES6 - destructuring
+
+-S
+--save
+
+npm i -S react-redux
+
+
+DESTRUCTURING:
+
+const a = {
+  numClicks: 42,
+  counter: 12,
+  checked: true
+};
+
+let { counter, numClicks, checked } = a;
+
+console.log(`counter: ${counter}`);
+	// note: It breaks the object out into variables!
+
+
+ES6:
+
+	const MyComponent = ({ name }) => {
+		return (
+			<h1>Hello, {name}</h1>
+		);
+	}
+	// note: name is destructured out of props and becomes it's own variable
+
+ES5:
+
+	var MyComponent = function(props) {
+		return (
+			<h1>Hello, {props.name}</h1>
+		);
+	}
+
+
+let {numClicks, ...other} = a;
+console.log(other);
+everything besides first param
+
+
+app.get("/foo/:id", function({params, ...req}, res) {
+	
+})
+
+*Responsive design (firefox):
+tools/developer/responsive
+(single column layout is popular)
+
+REACTJS-REDUX.PDF REVIEW:
+
+      (---APP---)
+    _/     \     \_
+   /        \      \
+Header     Main   Footer
+  |          |
+ Nav       Hello
+(action)   (subcribe)
+(dispatch)
+		 ->redux->
+				 
+one way data flow. top down. through props.
+Reducers to describe how actions change the state.
+
+REDUX has 3 principles:
+
+1. single source of truth
+2. state is read only
+3. changes are made with pure functions
+
+Reducers have to be "Pure functions":
+- Given the same input will get the same output
+(it shouldn't mutate a global variable)
+(it isn't opaque)
+(bugs are hard to test)
+
+	In function programming term: side effect (same input or none but different output)
+
+props will be a dispatch!
+
+
+Parent component is sending props
+
+
+Parent Component
+	- has state passed into child component as props
+	- also has function thats also passed to child as props
+
+Counter Container Component (child)
+	- will recieve props and make changes.
+
+Parent component subscribes and dispatches
+
+store.getState();
+gets state from react directly
+
+pass as prop example:
+onIncrement={ () => store.dispatch({type: INCREMENT}) }
+
+... spread operator
+
+You won't have to bind on click if you write it like this:
+
+onClick={() => this.onClick()}
+
+subscribe function is called everytime redux changes
+
+setState will trigger subscribe
+
+container component presents to presentational component
+
+redux logic is in container component
+
+it's all just props/state/render
+
+Action creators
+
+***react-redux***
+npm
+designed to make working with react redux easier
+
+<Provider>
+will set up a store!
+
+it goes around your routes.
+
+<Provider store={store}>
+	<App />
+</Provider>
+
+connect(mapStateToProps, mapDispatchToProps)(Counter) 
+is a function that returns a function
+
+mapStateToProps:
+(mapReduxStateToComponentProps)
+
+mapDispatchToProps:
+what event handlers will trigger...
+
+Redux Subscribe -> Component.setState (Redux State)
+				you're copying into component props
+
+const mapStateToProps = (state, ownProps) => {
+	return {
+		value: state.value
+	}
+}
+
+
+function mapStateToProps(reduxState, ownProps) {
+	return {
+		value: reduxState.value
+	}
+}
+
+props are read only and the component can't change the props.
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+	let props = {};
+		props.onIncrement: () => {
+			store.dispatch({type: INCREMENT})
+		};
+		props.onDecrement: () => {
+			store.dispatch({type: DECREMENT})
+		}
+	}
+}
+
+you can replace the container component with connect!!
+
+because the parent component is just passing props
+
+presentational component is dumb.. it only knows about the props that are given by the connect()
+
+
+
+
+
+
+

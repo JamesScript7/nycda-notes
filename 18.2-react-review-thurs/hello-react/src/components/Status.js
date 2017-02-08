@@ -18,9 +18,7 @@ class Status extends Component {
 		store.subscribe(() => {
 			let reduxState = store.getState();
 
-			this.setState({
-				statusUpdates: reduxState.statusUpdates
-			});
+			this.setState({ reduxState });
 		})
 }
 
@@ -32,7 +30,7 @@ class Status extends Component {
 
 				<ul>
 					{
-						statusUpdates.map((text,index) => {
+						this.statusUpdates.map((text,index) => {
 							return <li key={"item-" + (index + 1)}>{text}</li>
 						}).reverse()
 					}
