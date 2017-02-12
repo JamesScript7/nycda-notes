@@ -2,7 +2,6 @@
 window.addEventListener("load", function() {
 
 	var h1 = document.getElementById("title");
-
 	h1.innerHTML = "Changed!";
 
 
@@ -19,12 +18,11 @@ window.addEventListener("load", function() {
 	para.innerHTML = "paragraph in the div";
 	content.appendChild(para);
 
-
 	var guessBox = document.getElementById("guess");
 	var guess = parseInt(guessBox.value);
 
 	//older way
-	var button = document.getElementById("send");
+	// var button = document.getElementById("send");
 	// var clickFunction = function() {
 	// 	alert("You've typed the number " + guess);
 	// }
@@ -39,35 +37,12 @@ window.addEventListener("load", function() {
 	// button.addEventListener("click", clickFunction);
 
 	//or make it anonymous
-
-	button.addEventListener("click", function() {
-		alert("you clicked me");
-	})
+	// button.addEventListener("click", function() {
+	// 	alert("you clicked me");
+	// })
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

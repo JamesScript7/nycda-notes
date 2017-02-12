@@ -1,4 +1,3 @@
-
 //number value is what the computer randomly chose
 var number = pickNumber();
 console.log(number);
@@ -20,7 +19,7 @@ guessForm.addEventListener("submit", function(event) {
 	event.preventDefault();
 
 	//INPUT converted to an Integer
-	//local scope (don't get confused!)
+	//local scope
 	var guess = parseInt(guessNum.value);
 
 	//this creates an li element
@@ -48,6 +47,8 @@ guessForm.addEventListener("submit", function(event) {
 function pickNumber() {
 	  var d = new Date();
 	  return d.getMilliseconds() % 10 + 1;
+
+	  //Math method:
 	  // var number = Math.round(Math.random() * 10);
 	  // return number;
 	}
