@@ -127,7 +127,7 @@ grid options..
 Apache
 
 hidden-xs
-hideen-sm
+hidden-sm
 
 
 

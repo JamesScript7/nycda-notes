@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-
 	var number = pickNumber();
 	console.log(number);
 

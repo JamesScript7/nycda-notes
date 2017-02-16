@@ -35,7 +35,7 @@ app.get('/hello', function(req,res) {
 
 //This can be inside a function!
 var number = Math.random() * 10;
-	number = Math.floor(number) + 1;
+number = Math.floor(number) + 1;
 
 console.log(number);
 
