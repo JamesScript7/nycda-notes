@@ -1,0 +1,75 @@
+Workshop!
+
+push -> tests -> Heroku staging -> Heroku production
+
+Make sure everything is tested
+
+flicker api
+github api
+
+virtual machine
+
+digital ocean
+AWS
+
+SSL -> Apache/httpd/nginx -> Express App
+
+jasmine, mocha, jest
+
+DEVOPS
+
+Anyone can run a host!
+
+APACHE
+HTTPd (grandfather of webservers)
+static file serving
+it does proxying
+
+Apache is just making the connections(telephone operator)
+
+www. ->
+
+Apache will proxy it out
+
+nginx is faster (you can do security as well)
+apache is more stable
+
+reverse proxy
+load balancing
+
+ri.mu
+(hosting company)
+
+namecheap.com
+gandi.net
+
+they are resellers
+who is the wholeseller?
+
+domain name takes from name server
+and then to the host
+
+tell hosting comp what your name is
+tell your name server what host
+tell your host what...
+
+ansible
+
+lets you write script in code..
+
+ansible install appnewmachine2
+
+git push is tricky when you have multiple apps online
+
+
+
+
+
+
+
+
+
+
+
+
+
