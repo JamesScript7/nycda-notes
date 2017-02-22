@@ -1,0 +1,169 @@
+"Three Tier Architecture"
+
+You can run REACT on the server
+
+Browser <-> Express <-> Sqlite
+
+npm i json-server --save-dev
+
+travis-ci (continual integration)
+
+SVG: html like graphics specification
+
+passing data:
+curl -d'title=My+New&author=james' http://localhost:3000/posts
+
+you'll get back json. You are posting in posts.
+
+REST format
+
+GET posts/123/comments
+
+read comments from post 123
+
+curl http://localhost:3000/posts
+
+you will download data
+
+const store = createStore(reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
+
+abc.xyz && abc.xyz()
+
+whats the difference?
+
+abc is an object
+
+if xyz is a property of abc then run it as a function
+
+(mini if statement)
+
+let a = 1;
+
+a === 1 && "something"
+=> something
+
+a === 2 && "something"
+=> false
+
+fallback value
+let name = product.name || "N/A"
+
+|| will stop as soon as it finds a true
+
+&& will check everything and stop if it finds any false
+
+document and window are the standard browser object
+
+doSomethingCrazy()
+
+if (x > 0 && y < 20) {
+	isTopRight = true;
+}
+
+
+export default({title}) => {
+	return (
+		<h1>{title}</h1>
+	)
+}
+
+night capital flash crash
+
+Best Practices:
+Testing!
+Continual Integrations
+
+prop checking with prop types
+
+
+	React.PropTypes.string
+	React.PropTypes.arrayOf()
+
+
+BlogPost.propTypes = {
+	title: {}
+}
+
+BlogApp.jsx
+
+<div className="BlogPosts">
+	{
+		blogPosts.map((blogPost, key) => {
+			<BlogPost key={key}
+								title={blogPost.title}
+								body={blogPost.body}
+
+
+			/>
+		})
+	}
+</div>
+
+
+BlogPost.jsx (presentational component)(we can pass info as props)
+
+<div className="BlogPost">
+	<div>{}</div>
+	<div></div>
+	<div></div>
+</div>
+
+BlogForm.jsx (component)
+
+
+in the <form>
+
+onTitleChange(event) {
+	this.title = event.target.value;
+}
+onBodyChange(event) {
+	this.body = event.target.value;
+}
+
+onChange={this.onTitleChange}
+onChange={this.onBodyChange}
+
+
+this[event.target.name] = event.target.value;
+-same as-
+this.title
+
+
+const tmp = {};
+tmp[event.target.name] = event.target.value;
+this.setState(tmp);
+
+this.setState({
+	blogPosts: [
+		newBlogPost,
+		...blogPosts
+	]
+})
+
+error handling is important!
+
+componentDidMount() {
+	axios.get('/blogPost', function(data) {
+		this.setState({
+			blogPosts: res.data.post
+		})
+	})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
