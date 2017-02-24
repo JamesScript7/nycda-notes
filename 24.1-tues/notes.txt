@@ -154,7 +154,9 @@ componentDidMount() {
 }
 
 
+pass id as a prop to the Delete component
 
+brain tree
 
 
 
