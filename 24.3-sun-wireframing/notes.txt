@@ -1,2 +1,76 @@
-Wireframing:
+Persona (user experience)
+
+Make a few
+
+front end news:
+smashing magazine!
+
+Wireframing.
+
+
+Krystal:
+
+Presentation notes:
+
+screen recording. 90 seconds to two minutes.
+
+Say -
+Name
+Title
+
+Background
+Problem
+Technology - Feature/Functionality (top 2 to 3 features)
+
+Wrap it up
+	what's next?
+	a challenge you overcame
+	what industry/technology you might be interested in
+	features you'd like to add or other projects you'd like to add.
+
+Networking:
+
+You can ask -
+"how did you get into tech?"
+"what tech did you use"
+
+muse.com
+
+Look at their website to get "clues"
+
+
+Portfolio:
+Github LinkedIn
+
+your projects:
+screenshot
+title
+description
+
+data visualization is HOT
+D3
+data driven development
+
+check out the author of redux, jQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
