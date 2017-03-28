@@ -9,7 +9,7 @@ const url = "https://www.omdbapi.com/"
 
 request
 	.get(url)
-	.query({t: "interstellar"})
+	.query({title: "interstellar"})
 	.end(function(err,res) {
 		if(err || !res.ok) {
 			console.log("You got an: " + err.toString());
