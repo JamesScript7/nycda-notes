@@ -68,32 +68,3 @@ setInterval(function() {
   count += 1;
   console.log("Hello, this is the count:" + count);
 }, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

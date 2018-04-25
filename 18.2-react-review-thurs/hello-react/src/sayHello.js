@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SayHello extends Component {
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
 			name: props.name
 		}
@@ -15,7 +15,7 @@ class SayHello extends Component {
 
 	onNameChange(event) {
 		let newName = event.target.value || this.props.name;
-		
+
 		this.setState({
 			name: newName
 		})

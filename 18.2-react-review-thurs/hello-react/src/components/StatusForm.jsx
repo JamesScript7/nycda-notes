@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
-import actions from '../actions/addStatus';
-
+import addStatus from '../actions/addStatus';
 import store from '../store';
-
 
 class StatusForm extends Component {
 	constructor(props) {
@@ -13,9 +11,7 @@ class StatusForm extends Component {
 
 	onSubmit(e) {
 		e.preventDefault();
-
-		// this.props.addNewStatus(e.target.status.value);
-		const action = actions.addStatus(e.target.status.value)
+		const action = addStatus(e.target.status.value)
 
 		store.dispatch(action);
 	}
@@ -26,12 +22,12 @@ class StatusForm extends Component {
 
 					<h1>My Status</h1>
 
-					<input 
+					<input
 						name="status"
 						type="text" />
 
 					<button>SEND</button>
-					
+
 				</form>
 			);
 	}

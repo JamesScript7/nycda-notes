@@ -13,7 +13,7 @@ let
 function calculator(state, action) {
 	const currentState = state || defaultState;
 	let newState = currentState;
-	
+
 	let number = action.number
 
 	switch (action.type) {

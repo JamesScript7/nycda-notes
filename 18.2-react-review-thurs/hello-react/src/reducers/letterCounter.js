@@ -35,20 +35,3 @@ console.log("dispatching action:");
 store.dispatch({type: "ADD_WORD", word: "reduxrocks"});
 
 store.dispatch({type: "ADD_WORD", word: "reduxrocks"});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

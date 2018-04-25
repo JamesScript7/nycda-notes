@@ -1,20 +1,22 @@
-import {ADD_STATUS} from '../actions/addStatus';
+import { ADD_STATUS } from '../actions/addStatus';
 
-const defaultState = { statusUpdates: [] };
+const defaultState = {
+	statusUpdates: []
+};
 
-export default function reducer(state=defaultState, action) {
+export default function reducer(state = defaultState, action) {
 	switch (action.type) {
 		case ADD_STATUS:
 			const newStatusList = [
-				action.newStatus,
-				...state.statusUpdates
+				...state,
+				action.newStatus
 			];
 
 			return {
 				...state,
 				statusUpdates: newStatusList
 			};
+		default:
+			return state;
 	}
-
-	return state;
 }

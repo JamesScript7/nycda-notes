@@ -10,17 +10,17 @@ class Status extends Component {
 		this.state = {
 			statusUpdates: []
 		};
-
-		// this.addNewStatus = this.addNewStatus.bind(this);
 	}
 
 	componentDidMount() {
 		store.subscribe(() => {
 			let reduxState = store.getState();
 
-			this.setState({ reduxState });
-		})
-}
+			this.setState({
+				reduxState
+			});
+		});
+	}
 
 	render() {
 		return (
@@ -29,11 +29,11 @@ class Status extends Component {
 				<StatusForm />
 
 				<ul>
-					{
+					{/*
 						this.statusUpdates.map((text,index) => {
 							return <li key={"item-" + (index + 1)}>{text}</li>
 						}).reverse()
-					}
+					*/}
 				</ul>
 			</div>
 			);

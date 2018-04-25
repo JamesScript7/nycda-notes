@@ -14,11 +14,12 @@ export default function() {
           <li><Link to="/SayHello">SayHello</Link></li>
           <li><Link to="/OddOrEven">OddorEven</Link></li>
           <li><Link to="/Guess">Guess</Link></li>
-          <li><Link to="/FileList">FileList</Link></li>
+          <li><Link to="/FileLists">FileLists</Link></li>
           <li><Link to="/ListItem">ListItem</Link></li>
           <li><Link to="/Tweet">Tweet</Link></li>
           <li><Link to="/Parent">Parent</Link></li>
-          <li><Link to="/Status">Status</Link></li>
        </ul>
 	)
 }
+
+// <li><Link to="/Status">Status</Link></li>

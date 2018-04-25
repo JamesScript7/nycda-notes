@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ListItem from './ListItem';
 
-export default class FileList extends Component {
+class FileLists extends Component {
 	constructor(props) {
 		super(props);
 
@@ -21,24 +21,20 @@ export default class FileList extends Component {
 		}
 
 		this.deleteFile = this.deleteFile.bind(this);
-
 	}
 
 	deleteFile() {
-		console.log("FileList.deleteFile");
-		console.log(this);
-
 		this.directory.pop();
-		
-		this.setState({ directory: this.directory});
 
-		console.log(this.directory);
+		this.setState({
+			directory: this.directory
+		});
 	}
 
 	render() {
 		var directoriesToRender = [];
 
-		this.directory.forEach(file => {
+		this.state.directory.forEach(file => {
 			directoriesToRender.push(
 				<ListItem key={file.id} name={file.name} type="directory" onDelete={this.deleteFile} />
 				);
@@ -50,9 +46,12 @@ export default class FileList extends Component {
 						File Lists
 					</h1>
 					<ul>
-						{directoriesToRender}
-						{this.props.children}
+						{directoriesToRender.map(list => list)}
+						{/*this.props.children*/}
 					</ul>
-				</div>)
+				</div>
+		)
 	}
 }
+
+export default FileLists;

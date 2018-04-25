@@ -9,8 +9,8 @@ promise.
 	}).
 	then(function(str) {
 		// return str + "D";
-		// return Promise.reject("uh-oh");		
-		//it'll jump to the catch
+		// return Promise.reject("uh-oh");
+		// It'll jump to the catch
 		throw new Error("throw");
 	}).
 	then(function(str) {
@@ -26,23 +26,3 @@ promise.
 	then(function() {
 		console.log("Still Works!");
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

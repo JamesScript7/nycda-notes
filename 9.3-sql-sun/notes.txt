@@ -39,7 +39,7 @@ DROP INDEX blog_posts_title;
 CREATE INDEX blog_posts_title
 ON blog_posts (title);
 
-realtional databases
+relational databases
 
 profiles
 id | user_id | photo
@@ -120,7 +120,7 @@ ORDER BY courses.name DESC;
 
 cartesian product:
 SELECT * FROM courses, enrollments
-You'll get every combination! but it's too much! you don't need al that.
+You'll get every combination! but it's too much! you don't need all that.
 
 every row of courses mixed with every row from enrollments
 
@@ -146,20 +146,3 @@ you can serialize or parallelize queries
 
 whatever that ends with 8:
 '%8'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

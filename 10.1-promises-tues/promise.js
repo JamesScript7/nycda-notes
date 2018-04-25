@@ -11,11 +11,5 @@ randomPromise.then(function(str) {
 	console.log(str);
 }).catch(function(err) {
 	console.error(err)
-	// console.log(err);
 	throw err;
 });
-
-
-
-
-
