@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "0.8.5",
-    "sequelize-cli": "^2.5.1",
+    "sequelize-cli": "^6.5.2",
     "sqlite3": "^3.1.8",
     "webpack": "^2.2.1"
   },
